@@ -17,15 +17,6 @@ interface Product {
   subcategory: string;
 }
 
-interface Category {
-  id: string;
-  name: string;
-  subcategories: {
-    id: string;
-    name: string;
-  }[];
-}
-
 // Generar rutas estáticas para todos los productos
 export function getStaticPaths() {
   return products.map((product) => ({
@@ -57,26 +48,6 @@ const relatedProducts = products
   <meta property="og:image" content={product.gallery[0]} slot="head" />
   <meta property="og:url" content={Astro.url.href} slot="head" />
   <meta property="og:type" content="product" slot="head" />
-  
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="/">Inicio</a> &gt; 
-      <a href="/productos">Productos</a> &gt; 
-      {category ? (
-        <>
-          <a href={`/productos?categoria=${category.id}`}>{category.name}</a> &gt; 
-        </>
-      ) : null}
-      {subcategory ? (
-        <>
-          <a href={`/productos?categoria=${category?.id}&subcategoria=${subcategory.id}`}>
-            {subcategory.name}
-          </a> &gt; 
-        </>
-      ) : null}
-      <span>{product.name}</span>
-    </div>
-  </div>
   
   <section class="product-detail">
     <div class="container">
@@ -168,20 +139,6 @@ const relatedProducts = products
 </MainLayout>
 
 <style>
-  .breadcrumb {
-    background-color: var(--color-background);
-    padding: var(--spacing-md) 0;
-    margin-bottom: var(--spacing-lg);
-  }
-  
-  .breadcrumb a {
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-  
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
   
   .container {
     max-width: 1200px;
