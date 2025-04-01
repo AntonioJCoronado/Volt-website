@@ -65,12 +65,10 @@ const relatedProducts = products
           
           <div class="product-meta">
             {category ? (
-              <p>Categoría: <a href={`/productos?categoria=${category.id}`}>{category.name}</a></p>
+              <p>Categoría: {category.name}</p>
             ) : null}
             {subcategory ? (
-              <p>Subcategoría: <a href={`/productos?categoria=${category?.id}&subcategoria=${subcategory.id}`}>
-                {subcategory.name}
-              </a></p>
+              <p>Subcategoría: {subcategory.name}</p>
             ) : null}
           </div>
           
