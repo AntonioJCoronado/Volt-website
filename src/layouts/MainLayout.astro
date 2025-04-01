@@ -1,0 +1,83 @@
+---
+// Importar estilos globales
+import '../styles/main.css';
+// No importes productos.css aquí, lo importaremos en las páginas específicas
+const { title, description, currentPage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} - VOLT</title>
+    <slot name="head" /><!-- Para CSS adicional específico de la página -->
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <picture>
+            <source srcset="/img/logo-volt.webp" type="image/webp" />
+            <img src="/img/logo-volt.png" alt="Logo VOLT" width="80" height="40" loading="eager" />
+          </picture>
+        </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</div>
+      <nav class="menu" role="navigation">
+        <a href="/" class={currentPage === 'home' ? 'active' : ''}>Inicio</a>
+        <a href="/nosotros" class={currentPage === 'nosotros' ? 'active' : ''}>Nosotros</a>
+        <a href="/productos" class={currentPage === 'productos' ? 'active' : ''}>Productos</a>
+        <a href="/contacto" class={currentPage === 'contacto' ? 'active' : ''}>Contacto</a>
+      </nav>
+    </header>
+    
+    <main>
+      <slot /><!-- Aquí va el contenido de la página -->
+    </main>
+    
+    <footer class="footer">
+      <div class="nav-container">
+        <nav class="footer-nav" role="navigation">
+          <a href="/" class="nav-link">Inicio</a>
+          <a href="/nosotros" class="nav-link">Nosotros</a>
+          <a href="/productos" class="nav-link">Productos</a>
+          <a href="/contacto" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+
+      <div class="social-container">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <img src="/img/logo-instagram.svg" alt="Instagram" loading="lazy" width="38" height="38" />
+        </a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">
+          <img src="/img/logo-whatsapp.svg" alt="WhatsApp" loading="lazy" width="38" height="38" />
+        </a>
+      </div>
+
+      <div class="copyright">
+        <p>© 2025 Volt - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script>
+      // Script para el menú móvil
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.querySelector('.menu');
+        
+        if (menuToggle && menu) {
+          menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('active');
+          });
+        }
+      });
+    </script>
+    
+    <slot name="scripts" /><!-- Para scripts adicionales específicos de la página -->
+  </body>
+</html>
+

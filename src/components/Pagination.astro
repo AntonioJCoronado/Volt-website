@@ -1,0 +1,105 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props as Props;
+
+// Función para construir la URL de la página
+function getPageUrl(page: number): string {
+  try {
+    // Usar URL constructor con una base fallback
+    const url = new URL(baseUrl, 'http://localhost:3000');
+    
+    // Si ya hay parámetros en la URL
+    if (url.search) {
+      const params = new URLSearchParams(url.search);
+      params.set('pagina', page.toString());
+      return `${url.pathname}?${params.toString()}`;
+    } else {
+      // Si no hay parámetros
+      return `${url.pathname}?pagina=${page}`;
+    }
+  } catch (e) {
+    // Fallback simple si hay algún error con URL
+    if (baseUrl.includes('?')) {
+      return `${baseUrl}&pagina=${page}`;
+    }
+    return `${baseUrl}?pagina=${page}`;
+  }
+}
+
+// Determinar qué páginas mostrar
+const showFirst = currentPage > 3;
+const showLast = currentPage < totalPages - 2;
+const showPrevious = currentPage > 1;
+const showNext = currentPage < totalPages;
+
+// Crear array de páginas a mostrar
+let pages: number[] = [];
+if (totalPages <= 5) {
+  // Si hay 5 o menos páginas, mostrar todas
+  pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+} else {
+  // Siempre incluir la página actual
+  pages.push(currentPage);
+  
+  // Incluir una o dos páginas antes de la actual
+  if (currentPage > 1) pages.unshift(currentPage - 1);
+  if (currentPage > 2) pages.unshift(currentPage - 2);
+  
+  // Incluir una o dos páginas después de la actual
+  if (currentPage < totalPages) pages.push(currentPage + 1);
+  if (currentPage < totalPages - 1) pages.push(currentPage + 2);
+  
+  // Limitar a 5 páginas
+  if (pages.length > 5) {
+    if (currentPage < totalPages - 2) {
+      pages = pages.slice(0, 5);
+    } else {
+      pages = pages.slice(pages.length - 5);
+    }
+  }
+}
+---
+
+<div class="pagination">
+  {showPrevious && (
+    <a href={getPageUrl(currentPage - 1)} class="pagination-item pagination-arrow" data-page={currentPage - 1}>
+      &laquo; Anterior
+    </a>
+  )}
+  
+  {showFirst && (
+    <>
+      <a href={getPageUrl(1)} class="pagination-item" data-page="1">1</a>
+      {currentPage > 4 && <span class="pagination-ellipsis">...</span>}
+    </>
+  )}
+  
+  {pages.map((page) => (
+    <a 
+      href={getPageUrl(page)} 
+      class={`pagination-item ${page === currentPage ? 'active' : ''}`}
+      data-page={page}
+    >
+      {page}
+    </a>
+  ))}
+  
+  {showLast && (
+    <>
+      {currentPage < totalPages - 3 && <span class="pagination-ellipsis">...</span>}
+      <a href={getPageUrl(totalPages)} class="pagination-item" data-page={totalPages}>{totalPages}</a>
+    </>
+  )}
+  
+  {showNext && (
+    <a href={getPageUrl(currentPage + 1)} class="pagination-item pagination-arrow" data-page={currentPage + 1}>
+      Siguiente &raquo;
+    </a>
+  )}
+</div>
+

@@ -1,0 +1,124 @@
+---
+// Definir la interfaz para la subcategoría
+interface Subcategory {
+  id: string;
+  name: string;
+}
+
+// Definir la interfaz para la categoría
+interface Category {
+  id: string;
+  name: string;
+  subcategories: Subcategory[];
+}
+
+// Definir los props con tipos explícitos
+interface Props {
+  categories: Category[];
+  currentCategory: string;
+  currentSubcategory: string;
+}
+
+const { 
+  categories, 
+  currentCategory = 'todos', 
+  currentSubcategory = 'todos' 
+} = Astro.props as Props;
+
+// Función para construir URLs con parámetros
+function getCategoryUrl(categoryId: string): string {
+  if (categoryId === 'todos') {
+    return '/productos';
+  }
+  return `/productos?categoria=${encodeURIComponent(categoryId)}`;
+}
+
+function getSubcategoryUrl(categoryId: string, subcategoryId: string): string {
+  return `/productos?categoria=${encodeURIComponent(categoryId)}&subcategoria=${encodeURIComponent(subcategoryId)}`;
+}
+---
+
+<section class="categories-section">
+  <div class="main-categories-container">
+    <a href="/productos" class={`category-btn ${currentCategory === 'todos' ? 'active' : ''}`} data-category="todos">
+      Todos
+    </a>
+    {categories.map((category) => (
+      <a 
+        href={getCategoryUrl(category.id)} 
+        class={`category-btn ${currentCategory === category.id ? 'active' : ''}`}
+        data-category={category.id}
+      >
+        {category.name}
+      </a>
+    ))}
+  </div>
+  
+  <div class="subcategories-container" id="subcategories-container">
+    {currentCategory === 'todos' ? (
+      categories.map((category) => (
+        <div class="subcategory-group">
+          <h3 class="subcategory-title">{category.name}</h3>
+          <ul class="subcategory-list">
+            <li class="subcategory-item">
+              <a 
+                href={getCategoryUrl(category.id)}
+                class={`subcategory-link ${currentSubcategory === 'todos' && currentCategory === category.id ? 'active' : ''}`}
+                data-category={category.id}
+                data-subcategory="todos"
+              >
+                Todos
+              </a>
+            </li>
+            {category.subcategories.map((subcategory) => (
+              <li class="subcategory-item">
+                <a 
+                  href={getSubcategoryUrl(category.id, subcategory.id)}
+                  class={`subcategory-link ${currentSubcategory === subcategory.id && currentCategory === category.id ? 'active' : ''}`}
+                  data-category={category.id}
+                  data-subcategory={subcategory.id}
+                >
+                  {subcategory.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    ) : (
+      <div class="subcategory-group">
+        <h3 class="subcategory-title">
+          {categories.find((cat) => cat.id === currentCategory)?.name}
+        </h3>
+        <ul class="subcategory-list">
+          <li class="subcategory-item">
+            <a 
+              href={getCategoryUrl(currentCategory)}
+              class={`subcategory-link ${currentSubcategory === 'todos' ? 'active' : ''}`}
+              data-category={currentCategory}
+              data-subcategory="todos"
+            >
+              Todos
+            </a>
+          </li>
+          {categories
+            .find((cat) => cat.id === currentCategory)
+            ?.subcategories.map((subcategory) => (
+              <li class="subcategory-item">
+                <a 
+                  href={getSubcategoryUrl(currentCategory, subcategory.id)}
+                  class={`subcategory-link ${currentSubcategory === subcategory.id ? 'active' : ''}`}
+                  data-category={currentCategory}
+                  data-subcategory={subcategory.id}
+                >
+                  {subcategory.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    )}
+  </div>
+</section>
+
