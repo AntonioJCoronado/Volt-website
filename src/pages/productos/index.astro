@@ -2,7 +2,6 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import ProductsGrid from '../../components/react/ProductsGrid';
 import { categories, products } from '../../data/product-catalog';
-import '../../styles/productos.css';
 
 // Obtener parámetros de la URL
 const categoria = Astro.url.searchParams.get('categoria') || 'todos';
@@ -37,65 +36,3 @@ const currentPage = parseInt(paginaParam) || 1;
     initialPage={currentPage}
   />
 </MainLayout>
-
-<style>
-  /* Estilos específicos para esta página */
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-  }
-  
-  .no-products {
-    text-align: center;
-    padding: var(--spacing-xl);
-    color: var(--color-text-light);
-  }
-  
-  .debug-info {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    color: #666;
-    border-radius: 4px;
-  }
-  
-  @media (max-width: 992px) {
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Estilos para botones de categoría y subcategoría */
-  .subcategory-link {
-    background: none;
-    border: none;
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color var(--transition-fast);
-    display: inline-block;
-    padding: 3px 0;
-    cursor: pointer;
-    text-align: left;
-  }
-  
-  .subcategory-link:hover {
-    color: var(--color-primary);
-  }
-  
-  .subcategory-link.active {
-    color: var(--color-primary);
-    font-weight: 500;
-  }
-</style>
-

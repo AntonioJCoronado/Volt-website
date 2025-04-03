@@ -177,6 +177,7 @@ header {
 
 .title {
   font-size: 3rem;
+  font-family: var(--font-primary, sans-serif);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: var(--spacing-lg);
@@ -184,14 +185,12 @@ header {
 
 .title-dark {
   color: var(--color-text);
-  font-family: var(--font-secondary);
   text-transform: uppercase;
 }
 
 .title-blue {
   color: var(--color-primary);
   display: block;
-  font-family: var(--font-secondary);
   text-transform: uppercase;
 }
 
