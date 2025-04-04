@@ -226,8 +226,8 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
 
   const handlePageClick = (page: number) => {
     setCurrentPage(page)
-    // Scroll al inicio de los productos
-    document.querySelector(".products-section")?.scrollIntoView({ behavior: "smooth" })
+    // Eliminamos el scroll a la sección de productos porque ahora
+    // el componente Pagination se encarga de hacer scroll al inicio de la página
   }
 
   // Manejador para el carrusel

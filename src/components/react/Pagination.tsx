@@ -46,14 +46,26 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
   return (
     <div className="pagination">
       {showPrevious && (
-        <button className="pagination-item pagination-arrow" onClick={() => onPageChange(currentPage - 1)}>
+        <button
+          className="pagination-item pagination-arrow"
+          onClick={() => {
+            onPageChange(currentPage - 1)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }}
+        >
           &laquo; Anterior
         </button>
       )}
 
       {showFirst && (
         <>
-          <button className="pagination-item" onClick={() => onPageChange(1)}>
+          <button
+            className="pagination-item"
+            onClick={() => {
+              onPageChange(1)
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }}
+          >
             1
           </button>
           {currentPage > 4 && <span className="pagination-ellipsis">...</span>}
@@ -64,7 +76,10 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         <button
           key={page}
           className={`pagination-item ${page === currentPage ? "active" : ""}`}
-          onClick={() => onPageChange(page)}
+          onClick={() => {
+            onPageChange(page)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }}
         >
           {page}
         </button>
@@ -73,14 +88,26 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
       {showLast && (
         <>
           {currentPage < totalPages - 3 && <span className="pagination-ellipsis">...</span>}
-          <button className="pagination-item" onClick={() => onPageChange(totalPages)}>
+          <button
+            className="pagination-item"
+            onClick={() => {
+              onPageChange(totalPages)
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }}
+          >
             {totalPages}
           </button>
         </>
       )}
 
       {showNext && (
-        <button className="pagination-item pagination-arrow" onClick={() => onPageChange(currentPage + 1)}>
+        <button
+          className="pagination-item pagination-arrow"
+          onClick={() => {
+            onPageChange(currentPage + 1)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }}
+        >
           Siguiente &raquo;
         </button>
       )}
