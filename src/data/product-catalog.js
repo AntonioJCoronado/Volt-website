@@ -29,12 +29,11 @@
 /** @type {Category[]} */
 export const categories = [
   {
-    id: "laptops",
-    name: "Laptops",
+    id: "volt",
+    name: "Volt",
     subcategories: [
-      { id: "gaming", name: "Gaming" },
-      { id: "ultrabook", name: "Ultrabooks" },
-      { id: "workstation", name: "Workstation" },
+      { id: "auriculares_volt", name: "Auriculares Volt" },
+      { id: "cables_volt", name: "Cables Volt" },
     ],
   },
   {
