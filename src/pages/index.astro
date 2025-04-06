@@ -1,0 +1,75 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Inicio"
+  description="VOLT - Tecnología y accesorios"
+  currentPage="home"
+>
+  <section class="hero">
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <h1 class="title">
+          <span class="title-dark">OFERTAS</span>
+          <span class="title-blue">ESPECIALES</span>
+        </h1>
+        <p class="description">LO MEJOR EN TECNOLOGÍA</p>
+        <a href="/Volt-website/productos" class="btn">VER MÁS</a>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="/Volt-website/images/logos/logo-volt.webp"
+          alt="Logo VOLT"
+          id="animated-logo"
+          width="300"
+          height="300"
+        />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logo = document.getElementById("animated-logo");
+
+      if (!logo) {
+        return;
+      }
+
+      let angle = 0;
+
+      function animateLogo() {
+        angle += 0.01;
+
+        const moveX = Math.sin(angle) * 10;
+        const moveY = Math.cos(angle) * 10;
+
+        // @ts-ignore
+        logo.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+        requestAnimationFrame(animateLogo);
+      }
+
+      animateLogo();
+
+      logo.addEventListener("mouseover", function () {
+        this.style.filter = "drop-shadow(0 0 10px rgba(33, 150, 243, 0.6))";
+      });
+
+      logo.addEventListener("mouseout", function () {
+        this.style.filter = "none";
+      });
+    });
+  </script>
+</MainLayout>

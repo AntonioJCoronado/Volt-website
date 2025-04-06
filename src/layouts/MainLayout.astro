@@ -1,0 +1,123 @@
+---
+import "../styles/main.css";
+
+const { title, description, currentPage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} - VOLT</title>
+    <slot name="head" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/Volt-website">
+          <picture>
+            <img
+              src="/Volt-website/images/logos/logo-volt.webp"
+              alt="Logo VOLT"
+              width="80"
+              height="40"
+              loading="eager"
+            />
+          </picture>
+        </a>
+      </div>
+      <div
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        ☰
+      </div>
+      <nav class="menu" role="navigation">
+        <a href="/Volt-website" class={currentPage === "home" ? "active" : ""}
+          >Inicio</a
+        >
+        <a
+          href="/Volt-website/nosotros"
+          class={currentPage === "nosotros" ? "active" : ""}>Nosotros</a
+        >
+        <a
+          href="/Volt-website/productos"
+          class={currentPage === "productos" ? "active" : ""}>Productos</a
+        >
+        <a
+          href="/Volt-website/contacto"
+          class={currentPage === "contacto" ? "active" : ""}>Contacto</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="nav-container">
+        <nav class="footer-nav" role="navigation">
+          <a href="/Volt-website" class="nav-link">Inicio</a>
+          <a href="/Volt-website/nosotros" class="nav-link">Nosotros</a>
+          <a href="/Volt-website/productos" class="nav-link">Productos</a>
+          <a href="/Volt-website/contacto" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+
+      <div class="social-container">
+        <a
+          href="https://www.instagram.com/"
+          class="social-icon"
+          aria-label="Instagram"
+        >
+          <img
+            src="/Volt-website/images/logos/logo-instagram.svg"
+            alt="Instagram"
+            loading="lazy"
+            width="38"
+            height="38"
+          />
+        </a>
+        <a
+          href="https://web.whatsapp.com/"
+          class="social-icon"
+          aria-label="WhatsApp"
+        >
+          <img
+            src="/Volt-website/images/logos/logo-whatsapp.svg"
+            alt="WhatsApp"
+            loading="lazy"
+            width="38"
+            height="38"
+          />
+        </a>
+      </div>
+
+      <div class="copyright">
+        <p>© 2025 Volt - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        if (menuToggle && menu) {
+          menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <slot name="scripts" />
+  </body>
+</html>

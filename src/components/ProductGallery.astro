@@ -1,0 +1,150 @@
+---
+// Definir la interfaz para el producto
+interface Product {
+  id: string;
+  name: string;
+  gallery: string[];
+}
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props as Props;
+---
+
+<div class="product-gallery">
+  <div class="main-image-container">
+    <img
+      id="main-product-image"
+      src={product.gallery[0] || "/placeholder.svg"}
+      alt={product.name}
+      loading="eager"
+      decoding="async"
+      width="500"
+      height="500"
+    />
+  </div>
+
+  {
+    product.gallery.length > 1 && (
+      <div class="thumbnail-container">
+        {product.gallery.map((image, index) => (
+          <div
+            class={`thumbnail ${index === 0 ? "active" : ""}`}
+            data-image={image}
+          >
+            <img
+              src={image || "/placeholder.svg"}
+              alt={`${product.name} - Vista ${index + 1}`}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              width="100"
+              height="100"
+            />
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<script>
+  // Script para manejar la galería de imágenes
+  document.addEventListener("DOMContentLoaded", () => {
+    // Usar HTMLImageElement para el tipo correcto
+    const mainImage = document.getElementById(
+      "main-product-image"
+    ) as HTMLImageElement;
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    if (!mainImage) {
+      console.error("No se encontró la imagen principal");
+      return;
+    }
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", () => {
+        const imageSrc = thumbnail.getAttribute("data-image");
+
+        if (imageSrc) {
+          // Ahora TypeScript sabe que mainImage es un HTMLImageElement y tiene propiedad src
+          mainImage.src = imageSrc;
+
+          // Actualizar clase activa
+          thumbnails.forEach((t) => t.classList.remove("active"));
+          thumbnail.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .product-gallery {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .main-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .thumbnail-container {
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color var(--transition-fast);
+    background-color: var(--color-white);
+  }
+
+  .thumbnail.active {
+    border-color: var(--color-primary);
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .main-image-container {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .main-image-container {
+      height: 250px;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>

@@ -1,0 +1,344 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ProductGallery from "../../components/ProductGallery.astro";
+import { categories, products } from "../../data/product-catalog";
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  detailedDescription: string;
+  price: string;
+  image: string;
+  gallery: string[];
+  category: string;
+  subcategory: string;
+}
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+    params: { id: product.id },
+    props: { product },
+  }));
+}
+
+// Obtener el producto de las props
+const { product } = Astro.props as { product: Product };
+
+// Obtener categoría y subcategoría con verificación de tipo
+const category = categories.find((cat) => cat.id === product.category) || null;
+const subcategory =
+  category?.subcategories.find((sub) => sub.id === product.subcategory) || null;
+
+// Productos relacionados (misma subcategoría, excluyendo el actual)
+const relatedProducts = products
+  .filter((p) => p.subcategory === product.subcategory && p.id !== product.id)
+  .slice(0, 3);
+---
+
+<MainLayout
+  title={product.name}
+  description={product.description}
+  currentPage="productos"
+>
+  <meta property="og:title" content={`${product.name} - VOLT`} slot="head" />
+  <meta property="og:description" content={product.description} slot="head" />
+  <meta property="og:image" content={product.gallery[0]} slot="head" />
+  <meta property="og:url" content={Astro.url.href} slot="head" />
+  <meta property="og:type" content="product" slot="head" />
+
+  <section class="product-detail">
+    <div class="container">
+      <div class="product-detail-grid">
+        <div class="product-gallery-container">
+          <ProductGallery product={product} />
+        </div>
+
+        <div class="product-info-container">
+          <h1 class="product-title">{product.name}</h1>
+          <p class="product-price">{product.price}</p>
+          <div class="product-description">
+            <p>{product.detailedDescription}</p>
+          </div>
+
+          <div class="product-meta">
+            {category ? <p>Categoría: {category.name}</p> : null}
+            {subcategory ? <p>Subcategoría: {subcategory.name}</p> : null}
+          </div>
+
+          <a href="https://wa.me/541128715356">
+            <button class="contactar-btn">Contactar a WhatsApp</button>
+          </a>
+
+          <div class="product-share">
+            <p>Compartir:</p>
+            <div class="share-buttons">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${Astro.url.href}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn facebook"
+              >
+                Facebook
+              </a>
+              <a
+                href={`https://x.com/intent/tweet?url=${Astro.url.href}&text=${encodeURIComponent(product.name)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn x"
+              >
+                X
+              </a>
+              <a
+                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${product.name} - ${Astro.url.href}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="share-btn whatsapp"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    relatedProducts.length > 0 && (
+      <section class="related-products">
+        <div class="container">
+          <h2 class="section-title">Productos relacionados</h2>
+          <div class="related-products-grid">
+            {relatedProducts.map((relatedProduct) => (
+              <div class="related-product-card">
+                <div class="related-product-image">
+                  <a href={`/Volt-website/productos/${relatedProduct.id}`}>
+                    <img
+                      src={relatedProduct.image || "/placeholder.svg"}
+                      alt={relatedProduct.name}
+                      loading="lazy"
+                      decoding="async"
+                      width="200"
+                      height="200"
+                    />
+                  </a>
+                </div>
+                <div class="related-product-info">
+                  <h3 class="related-product-title">
+                    <a href={`/Volt-website/productos/${relatedProduct.id}`}>
+                      {relatedProduct.name}
+                    </a>
+                  </h3>
+                  <p class="related-product-price">{relatedProduct.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <script>
+    // Script para manejar la navegación
+    document.addEventListener("DOMContentLoaded", function () {
+      // Interceptar clics en enlaces
+      document
+        .querySelectorAll('a[href^="/Volt-website/productos"]')
+        .forEach(function (link) {
+          link.addEventListener("click", function (e: Event) {
+            const target = e.currentTarget as HTMLAnchorElement;
+            const href = target.getAttribute("href");
+            if (href && href.includes("?")) {
+              e.preventDefault();
+              window.location.href = href;
+            }
+          });
+        });
+    });
+  </script>
+</MainLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .product-detail {
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+  }
+
+  .product-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .product-title {
+    font-size: 2rem;
+    font-family: var(--font-primary, sans-serif);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+  }
+
+  .product-price {
+    font-size: 1.8rem;
+    font-family: var(--font-primary, sans-serif);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .product-description {
+    font-family: var(--font-secondary, sans-serif);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+
+  .product-meta {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .product-meta p {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .product-meta a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .product-meta a:hover {
+    text-decoration: underline;
+  }
+
+  .contactar-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .contactar-btn:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .product-share {
+    margin-top: var(--spacing-lg);
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+  }
+
+  .share-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .facebook {
+    background-color: #3b5998;
+  }
+
+  .x {
+    background-color: #000000;
+  }
+
+  .whatsapp {
+    background-color: #25d366;
+  }
+
+  .related-products {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.5rem;
+    color: var(--color-text);
+  }
+
+  .related-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .related-product-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .related-product-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .related-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-fast);
+  }
+
+  .related-product-card:hover .related-product-image img {
+    transform: scale(1.05);
+  }
+
+  .related-product-info {
+    padding: var(--spacing-md);
+  }
+
+  .related-product-title {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .related-product-title a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .related-product-price {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 992px) {
+    .product-detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .related-products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .related-products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
