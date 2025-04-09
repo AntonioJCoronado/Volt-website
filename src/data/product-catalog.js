@@ -71,7 +71,7 @@ export const products = [
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado. 5 horas de bateria",
-    price: "$0.43",
+    price: "$0.43 USD",
     image: "/Volt-website/images/productos/volt/auriculares/er19/er19.webp",
     gallery: [
       "/Volt-website/images/productos/volt/auriculares/er19/er19.webp",
@@ -86,7 +86,7 @@ export const products = [
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado.",
-    price: "$0.60",
+    price: "$0.60 USD",
     image: "/Volt-website/images/productos/volt/auriculares/er22/er22.webp",
     gallery: [
       "/Volt-website/images/productos/volt/auriculares/er22/er22.webp",
@@ -101,7 +101,7 @@ export const products = [
     description: "Carga rapida con conexión Lightning para iPhone",
     detailedDescription:
       "Cable marca Volt con conexión lightning para iPhone está diseñada para ofrecer carga rapida a los dispositivos de la marca iPhone.",
-    price: "$0.37",
+    price: "$0.37 USD",
     image: "/Volt-website/images/productos/volt/cables/lightning/caja_5a.webp",
     gallery: [
       "/Volt-website/images/productos/volt/cables/lightning/caja_5a.webp",
@@ -115,7 +115,7 @@ export const products = [
     description: "Carga rapida con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.29",
+    price: "$0.29 USD",
     image: "/Volt-website/images/productos/volt/cables/microv8/caja_5a.webp",
     gallery: [
       "/Volt-website/images/productos/volt/cables/microv8/caja_5a.webp",
@@ -129,7 +129,7 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.31",
+    price: "$0.31 USD",
     image: "/Volt-website/images/productos/volt/cables/tipoc/caja_5a.webp",
     gallery: ["/Volt-website/images/productos/volt/cables/tipoc/caja_5a.webp"],
     category: "volt",
@@ -141,7 +141,7 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.53",
+    price: "$0.53 USD",
     image: "/Volt-website/images/productos/volt/cables/tipoc/bolsa_5a.webp",
     gallery: [
       "/Volt-website/images/productos/volt/cables/tipoc/bolsa_5a.webp",
@@ -156,7 +156,7 @@ export const products = [
     description: "Cable de carga rapida con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.51",
+    price: "$0.51 USD",
     image: "/Volt-website/images/productos/volt/cables/microv8/bolsa_5a.webp",
     gallery: [
       "/Volt-website/images/productos/volt/cables/microv8/bolsa_5a.webp",
@@ -171,7 +171,7 @@ export const products = [
     description: "Cable enrollado con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, cable enrollado.",
-    price: "$0.55",
+    price: "$0.55 USD",
     image:
       "/Volt-website/images/productos/volt/cables/tipoc/enrollado_5.1a.webp",
     gallery: [
@@ -186,7 +186,7 @@ export const products = [
     description: "Cable enrollado con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles, cable enrollado.",
-    price: "$0.50",
+    price: "$0.50 USD",
     image:
       "/Volt-website/images/productos/volt/cables/microv8/enrollado_5.1a.webp",
     gallery: [
@@ -201,7 +201,7 @@ export const products = [
     description: "Cable mallado con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
-    price: "$0.43",
+    price: "$0.43 USD",
     image: "/Volt-website/images/productos/volt/cables/tipoc/mallado_5a.webp",
     gallery: [
       "/Volt-website/images/productos/volt/cables/tipoc/mallado_5a.webp",
@@ -216,7 +216,7 @@ export const products = [
     description: "Cable de carga y datos con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles, cable de carga y datos.",
-    price: "$0.44",
+    price: "$0.44 USD",
     image:
       "/Volt-website/images/productos/volt/cables/microv8/cargadatos_5.1a.webp",
     gallery: [
@@ -231,7 +231,7 @@ export const products = [
     description: "Cable de carga y datos con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, cable de carga y datos.",
-    price: "$0.51",
+    price: "$0.51 USD",
     image:
       "/Volt-website/images/productos/volt/cables/tipoc/cargadatos_5.1a.webp",
     gallery: [
@@ -246,7 +246,7 @@ export const products = [
     description: "Cancelación de ruido, incluye micrófono integrado",
     detailedDescription:
       "Auriculares P9 con cancelación activa de ruido te permiten sumergirte completamente en tu música. Con hasta 10 horas de batería, son buenos para viajes largos. Resistentes al agua. Incluye micrófono integrado",
-    price: "$4.00",
+    price: "$4.00 USD",
     image: "/Volt-website/images/productos/audio/auriculares/p9/p9.webp",
     gallery: ["/Volt-website/images/productos/audio/auriculares/p9/p9.webp"],
     category: "audio",
@@ -259,7 +259,7 @@ export const products = [
       "Bluetooth 5.0, resistente al agua, 15h batería, incluye micrófono integrado",
     detailedDescription:
       "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
-    price: "$2.37",
+    price: "$2.37 USD",
     image: "/Volt-website/images/productos/audio/auriculares/p47/p47.webp",
     gallery: ["/Volt-website/images/productos/audio/auriculares/p47/p47.webp"],
     category: "audio",
@@ -271,7 +271,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$2.90",
+    price: "$2.90 USD",
     image: "/Volt-website/images/productos/audio/auriculares/a6s/a6s.webp",
     gallery: [
       "/Volt-website/images/productos/audio/auriculares/a6s/a6s.webp",
@@ -286,7 +286,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Los auriculares inalámbricos E6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 3 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$3.14",
+    price: "$3.14 USD",
     image: "/Volt-website/images/productos/audio/auriculares/e6s/e6s.webp",
     gallery: [
       "/Volt-website/images/productos/audio/auriculares/e6s/e6s.webp",
@@ -303,7 +303,7 @@ export const products = [
       "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49",
+    price: "$3.49 USD",
     image: "/Volt-website/images/productos/audio/auriculares/f9/f9.webp",
     gallery: [
       "/Volt-website/images/productos/audio/auriculares/f9/f9.webp",
@@ -320,7 +320,7 @@ export const products = [
       "Bluetooth 5.0, resistente al agua, 2h batería continua, luz led integrado",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49",
+    price: "$3.49 USD",
     image: "/Volt-website/images/productos/audio/auriculares/m10/m10.webp",
     gallery: ["/Volt-website/images/productos/audio/auriculares/m10/m10.webp"],
     category: "audio",
@@ -332,7 +332,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$2.80",
+    price: "$2.80 USD",
     image: "/Volt-website/images/productos/audio/auriculares/pro3/pro3.webp",
     gallery: [
       "/Volt-website/images/productos/audio/auriculares/pro3/pro3.webp",
@@ -346,7 +346,7 @@ export const products = [
     description: "Ideal para hacer deporte.",
     detailedDescription:
       "El Smartwatch M7 incluye cargador magnético con extremo usb macho, podes conectarlo a cualquier cargador de celular tradicional que tengas en casa. Además, cuenta con una APP gratuita displonible para descargar a su dispositivo android o iOS para aprovechar al 100% su reloj.",
-    price: "$2.07",
+    price: "$2.07 USD",
     image:
       "/Volt-website/images/productos/dispositivo/inteligente/smartwatch/m7/m7.webp",
     gallery: [
@@ -362,7 +362,7 @@ export const products = [
     description: "Ideal para hacer deporte.",
     detailedDescription:
       "Este elegante reloj inteligente no solo marca la hora, sino que transforma tu rutina diaria en una experiencia futurista. Ideal para hacer deportes, perfecto para tu vida activa.",
-    price: "$2.30",
+    price: "$2.30 USD",
     image:
       "/Volt-website/images/productos/dispositivo/inteligente/smartwatch/d20/d20.webp",
     gallery: [
@@ -377,7 +377,7 @@ export const products = [
     description: "Recomendado para karaoke.",
     detailedDescription:
       "Este micrófono inalámbrico de alta calidad ofrece conectividad bluetooth y una variedad de funciones. Cuenta con un botón ON/OFF para controlar el encendido, la detención o el play de la música, así como para aumentar o disminuir el volumen. También permite eliminar la voz de la canción que se esté reproduciendo.",
-    price: "$2.63",
+    price: "$2.63 USD",
     image: "/Volt-website/images/productos/audio/microfonos/ws858/ws858.webp",
     gallery: [
       "/Volt-website/images/productos/audio/microfonos/ws858/ws858.webp",
@@ -391,7 +391,7 @@ export const products = [
     description: "Parlante inalambrico con luz.",
     detailedDescription:
       "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$2.77",
+    price: "$2.77 USD",
     image: "/Volt-website/images/productos/audio/parlantes/m400/m400.webp",
     gallery: [
       "/Volt-website/images/productos/audio/parlantes/m400/m400.webp",
@@ -406,7 +406,7 @@ export const products = [
     description: "Parlante inalambrico con luz",
     detailedDescription:
       "Parlante BX-39 Mini, viene con cargador tipo c. Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$4.53",
+    price: "$4.53 USD",
     image:
       "/Volt-website/images/productos/audio/parlantes/bx39mini/bx39mini.webp",
     gallery: [
@@ -423,7 +423,7 @@ export const products = [
       "¡Sumergete en el ritmo! Con nuestro parlante para ducha con Bluetooth.",
     detailedDescription:
       " Diseñado para resistir salpicaduras y ambientes húmedos, este parlante te permite disfrutar de tu música favorita mientras te duchas. Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$2.59",
+    price: "$2.59 USD",
     image:
       "/Volt-website/images/productos/audio/parlantes/splashproof/splashproof.webp",
     gallery: [
@@ -439,7 +439,7 @@ export const products = [
     description: "Funda y soporte de celular para bici y moto",
     detailedDescription:
       "Soporte con funda diseñado aprueba de agua, protege tu celular de lluvias suaves o intensas, no filtra agua y no deja pasar la humedad.",
-    price: "$2.32",
+    price: "$2.32 USD",
     image:
       "/Volt-website/images/productos/accesorios/soporte/moto/waterproof/waterproof.webp",
     gallery: [
@@ -455,7 +455,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.07",
+    price: "$1.07 USD",
     image:
       "/Volt-website/images/productos/accesorios/soporte/auto/mount/mount.webp",
     gallery: [
@@ -472,7 +472,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$0.66",
+    price: "$0.66 USD",
     image:
       "/Volt-website/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
     gallery: [
@@ -489,7 +489,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.16",
+    price: "$1.16 USD",
     image:
       "/Volt-website/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
@@ -507,7 +507,7 @@ export const products = [
     description: "Soporte de celular para auto tipo universal",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.89",
+    price: "$1.89 USD",
     image:
       "/Volt-website/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
     gallery: [
@@ -522,7 +522,7 @@ export const products = [
     description: "Teclado con conexión Bluetooth",
     detailedDescription:
       "Este teclado inalambrico modelo i8 es el mejor complemento para hacer todo tipo de actividades. Es cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.",
-    price: "$2.25",
+    price: "$2.25 USD",
     image: "/Volt-website/images/productos/accesorios/teclado/i8/i8.webp",
     gallery: [
       "/Volt-website/images/productos/accesorios/teclado/i8/i8_01.webp",
@@ -536,7 +536,7 @@ export const products = [
     description: "Mouse Pad Ergonomico Con Gel Varios Colores",
     detailedDescription:
       "Experimentá la comodidad definitiva con nuestros mousepads ergonómicos con apoyamuñecas. Diseñados para proteger tus muñecas durante largas sesiones de trabajo, estudio o gaming, combinan funcionalidad, estilo y salud en un solo accesorio.",
-    price: "$1.15",
+    price: "$1.15 USD",
     image: "/Volt-website/images/productos/accesorios/mousepad/gel/gel.webp",
     gallery: [
       "/Volt-website/images/productos/accesorios/mousepad/gel/gel.webp",
@@ -552,7 +552,7 @@ export const products = [
       "Crea un ambiente relajante en tu dormitorio o cualquier otra habitación de tu hogar",
     detailedDescription:
       "Esta excelente luz de noche es un dispositivo innovador que te permitirá transformar cualquier habitación en un mágico cielo estrellado. Crea una atmósfera relajante y encantadora con esta lámpara proyectora de estrellas, ideal para momentos de relajación, eventos especiales o para ayudar a los niños a conciliar el sueño.",
-    price: "$4.81",
+    price: "$4.81 USD",
     image:
       "/Volt-website/images/productos/accesorios/lampara/starlight/starlight.webp",
     gallery: [
