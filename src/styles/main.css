@@ -294,6 +294,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40vw;
+  max-width: 450px;
+  height: auto;
 }
 
 /* Estilo para la animación del logo */
@@ -429,8 +432,10 @@ header {
 
   .content,
   .image-container {
-    width: 100%;
+    width: 80vw;
+    max-width: 300px;
     text-align: center;
+    
   }
 
   .description {
