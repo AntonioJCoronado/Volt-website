@@ -11,7 +11,49 @@ const { title, description, currentPage } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/public/fonts/stylesheet.css">
+
+    <link rel="stylesheet" href="/Volt-website/fonts/stylesheet.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Volt-website/favicon/favicon.ico"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/Volt-website/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/Volt-website/favicon/favicon-16x16.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/Volt-website/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/Volt-website/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/Volt-website/favicon/android-chrome-512x512.png"
+    />
+
+    <link rel="manifest" href="/Volt-website/favicon/site.webmanifest" />
+
     <title>{title} - VOLT</title>
     <slot name="head" />
   </head>
