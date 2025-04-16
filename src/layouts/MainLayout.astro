@@ -33,10 +33,11 @@ const { title, description, currentPage } = Astro.props;
       <div
         class="menu-toggle"
         id="menu-toggle"
+        role="button"
         aria-label="Abrir menú"
         aria-expanded="false"
       >
-        ☰
+        ≡
       </div>
       <nav class="menu" role="navigation">
         <a href="/Volt-website" class={currentPage === "home" ? "active" : ""}
