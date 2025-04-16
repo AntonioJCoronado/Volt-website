@@ -30,7 +30,7 @@
 }
 
 .hero-subtitle {
-  color: var(--color-text-light);
+  color: var(--color-black);
   font-family: var(--font-secondary, sans-serif);
   font-size: 1.2rem;
   max-width: 600px;
