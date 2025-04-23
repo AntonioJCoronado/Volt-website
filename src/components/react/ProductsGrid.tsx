@@ -659,7 +659,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
         {displayedProducts.map((product) => (
           <div className="product-card" key={product.id}>
             <div className="product-image">
-              <a href={`/Volt-website/productos/${product.id}`}>
+              <a href={`/productos/${product.id}`}>
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}
@@ -669,14 +669,14 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
             </div>
             <div className="product-info">
               <h3 className="product-title">
-                <a href={`/Volt-website/productos/${product.id}`}>
+                <a href={`/productos/${product.id}`}>
                   {product.name}
                 </a>
               </h3>
               <p className="product-description">{product.description}</p>
               <p className="product-price">{product.price}</p>
               <a
-                href={`/Volt-website/productos/${product.id}`}
+                href={`/productos/${product.id}`}
                 className="product-btn"
               >
                 Ver detalles

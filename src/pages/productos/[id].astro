@@ -113,7 +113,7 @@ const relatedProducts = products
             {relatedProducts.map((relatedProduct) => (
               <div class="related-product-card">
                 <div class="related-product-image">
-                  <a href={`/Volt-website/productos/${relatedProduct.id}`}>
+                  <a href={`/productos/${relatedProduct.id}`}>
                     <img
                       src={relatedProduct.image || "/placeholder.svg"}
                       alt={relatedProduct.name}
@@ -145,7 +145,7 @@ const relatedProducts = products
     document.addEventListener("DOMContentLoaded", function () {
       // Interceptar clics en enlaces
       document
-        .querySelectorAll('a[href^="/Volt-website/productos"]')
+        .querySelectorAll('a[href^="/productos"]')
         .forEach(function (link) {
           link.addEventListener("click", function (e: Event) {
             const target = e.currentTarget as HTMLAnchorElement;

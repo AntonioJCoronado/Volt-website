@@ -3,8 +3,8 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   // Configuración del sitio
-  site: 'https://AntonioJCoronado.github.io',
-  base: 'Volt-website',
+  site: 'https://voltimportado.com.ar',
+  base: '/',
   
   // Integración de React
   integrations: [react()],

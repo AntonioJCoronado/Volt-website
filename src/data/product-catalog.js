@@ -457,11 +457,11 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$1.07 USD",
     image:
-      "/Volt-website/images/productos/accesorios/soporte/auto/mount/mount.webp",
+      "/images/productos/accesorios/soporte/auto/mount/mount.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/soporte/auto/mount/mount.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/mount/mount_01.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/mount/mount_02.webp",
+      "/images/productos/accesorios/soporte/auto/mount/mount.webp",
+      "/images/productos/accesorios/soporte/auto/mount/mount_01.webp",
+      "/images/productos/accesorios/soporte/auto/mount/mount_02.webp",
     ],
     category: "accesorios",
     subcategory: "soportes",
@@ -474,11 +474,11 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$0.66 USD",
     image:
-      "/Volt-website/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
+      "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/mobileholder/mobileholder_01.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/mobileholder/mobileholder_02.webp",
+      "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
+      "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder_01.webp",
+      "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder_02.webp",
     ],
     category: "accesorios",
     subcategory: "soportes",
@@ -491,12 +491,12 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$1.16 USD",
     image:
-      "/Volt-website/images/productos/accesorios/soporte/auto/under/under.webp",
+      "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/soporte/auto/under/under.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/under/under_01.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/under/under_02.webp",
-      "/Volt-website/images/productos/accesorios/soporte/auto/under/under_03.webp",
+      "/images/productos/accesorios/soporte/auto/under/under.webp",
+      "/images/productos/accesorios/soporte/auto/under/under_01.webp",
+      "/images/productos/accesorios/soporte/auto/under/under_02.webp",
+      "/images/productos/accesorios/soporte/auto/under/under_03.webp",
     ],
     category: "accesorios",
     subcategory: "soportes",
@@ -509,9 +509,9 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$1.89 USD",
     image:
-      "/Volt-website/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
+      "/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
+      "/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
     ],
     category: "accesorios",
     subcategory: "soportes",
@@ -523,9 +523,9 @@ export const products = [
     detailedDescription:
       "Este teclado inalambrico modelo i8 es el mejor complemento para hacer todo tipo de actividades. Es cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.",
     price: "$2.25 USD",
-    image: "/Volt-website/images/productos/accesorios/teclado/i8/i8.webp",
+    image: "/images/productos/accesorios/teclado/i8/i8.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/teclado/i8/i8_01.webp",
+      "/images/productos/accesorios/teclado/i8/i8_01.webp",
     ],
     category: "accesorios",
     subcategory: "teclados",
@@ -537,10 +537,10 @@ export const products = [
     detailedDescription:
       "Experimentá la comodidad definitiva con nuestros mousepads ergonómicos con apoyamuñecas. Diseñados para proteger tus muñecas durante largas sesiones de trabajo, estudio o gaming, combinan funcionalidad, estilo y salud en un solo accesorio.",
     price: "$1.15 USD",
-    image: "/Volt-website/images/productos/accesorios/mousepad/gel/gel.webp",
+    image: "/images/productos/accesorios/mousepad/gel/gel.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/mousepad/gel/gel.webp",
-      "/Volt-website/images/productos/accesorios/mousepad/gel/gel_01.webp",
+      "/images/productos/accesorios/mousepad/gel/gel.webp",
+      "/images/productos/accesorios/mousepad/gel/gel_01.webp",
     ],
     category: "accesorios",
     subcategory: "mousepad",
@@ -554,11 +554,11 @@ export const products = [
       "Esta excelente luz de noche es un dispositivo innovador que te permitirá transformar cualquier habitación en un mágico cielo estrellado. Crea una atmósfera relajante y encantadora con esta lámpara proyectora de estrellas, ideal para momentos de relajación, eventos especiales o para ayudar a los niños a conciliar el sueño.",
     price: "$4.81 USD",
     image:
-      "/Volt-website/images/productos/accesorios/lampara/starlight/starlight.webp",
+      "/images/productos/accesorios/lampara/starlight/starlight.webp",
     gallery: [
-      "/Volt-website/images/productos/accesorios/lampara/starlight/starlight.webp",
-      "/Volt-website/images/productos/accesorios/lampara/starlight/starlight_01.webp",
-      "/Volt-website/images/productos/accesorios/lampara/starlight/starlight_02.webp",
+      "/images/productos/accesorios/lampara/starlight/starlight.webp",
+      "/images/productos/accesorios/lampara/starlight/starlight_01.webp",
+      "/images/productos/accesorios/lampara/starlight/starlight_02.webp",
     ],
     category: "accesorios",
     subcategory: "lamparas",
