@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProductsGrid from "../../components/react/ProductsGrid";
 import { categories, products } from "../../data/product-catalog";
+import "../../styles/productos.css"
 
 // Obtener parámetros de la URL
 const categoria = Astro.url.searchParams.get("categoria") || "todos";

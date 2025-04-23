@@ -1,0 +1,118 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import "../styles/contacto.css";
+---
+
+<MainLayout
+  title="Contacto"
+  description="Contacta con VOLT a través de WhatsApp para más información sobre nuestros productos"
+  currentPage="contacto"
+>
+  <section class="contact-hero">
+    <div class="container">
+      <h1 class="title">
+        <span class="title-dark">COMUNÍCATE</span>
+        <span class="title-blue">AHORA</span>
+      </h1>
+      <p class="subtitle">
+        ¡Estamos listos para atenderte y responder todas tus consultas!
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <h2 class="section-title">Información de Contacto</h2>
+            <p class="contact-note">
+              ¡Actualmente contamos únicamente con contacto vía WhatsApp!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="icon-container">
+                  <img
+                    src="/Volt-website/images/logos/icono-telefono.svg"
+                    alt="Icono Telefono"
+                    loading="lazy"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <div class="contact-text">
+                  <h3>WhatsApp</h3>
+                  <p>+54 9 11 3505-3984</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="icon-container">
+                  <img
+                    src="/Volt-website/images/logos/icono-reloj.svg"
+                    alt="Icono Reloj"
+                    loading="lazy"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <div class="contact-text">
+                  <h3>Horario de Atención</h3>
+                  <p>Lunes a Viernes: 8:30 - 18 hs.</p>
+                  <p>Sábados: 9 - 14 hs.</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="icon-container">
+                  <img
+                    src="/Volt-website/images/logos/icono-casa.svg"
+                    alt="Icono Casa"
+                    loading="lazy"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <div class="contact-text">
+                  <h3>Sitio Web</h3>
+                  <p>voltimportado.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="whatsapp-cta">
+              <a
+                href="https://wa.me/5491135053984"
+                class="whatsapp-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/Volt-website/images/logos/logo-whatsapp.svg"
+                  alt="Icono Reloj"
+                  loading="lazy"
+                  width="24"
+                  height="24"
+                />
+
+                Contactar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-image">
+          <div class="image-container">
+            <img
+              src="/Volt-website/images/logos/logo-volt-whatsapp.png"
+              alt="Volt Logo"
+              class="logo-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
