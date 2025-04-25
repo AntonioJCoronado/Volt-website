@@ -1,0 +1,142 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import "../styles/preguntas-frecuentes.css";
+---
+
+<MainLayout
+  title="Preguntas Frecuentes"
+  description="Pregunta Frecuentes de Volt"
+  currentPage="contacto"
+>
+  <section class="contact-hero">
+    <div class="container">
+      <h1 class="title">
+        <span class="title-dark">PREGUNTAS</span>
+        <span class="title-blue">FRECUENTES</span>
+      </h1>
+      <p class="subtitle">
+        ¡Estamos aquí para ayudarte a tener la mejor experiencia de compra
+        posible!
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question">¿QUIÉNES SOMOS?</div>
+        <div class="faq-answer">
+          <p>
+            En VOLT somos una empresa Argentina con más de 10 años de
+            experiencia en la importación y venta mayorista de productos
+            electrónicos traidos directamente desde China. Nos especializamos en
+            ofrecer tecnología de calidad al mejor precio del mercado, ayudando
+            a negocios de todo el país a crecer y mantenerse competitivos.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿QUE MÉTODOS DE PAGO ACEPTAN?</div>
+        <div class="faq-answer">
+          <p>
+            Actualmente solo aceptamos transferencia bancaria. Para más
+            información puede escribirnos en nuestro WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿HACEN ENVÍOS A TODO EL PAÍS?</div>
+        <div class="faq-answer">
+          <p>
+            Sí, realizamos envíos a todas las provincias y ciudades del país.
+            Los tiempos de entrega pueden variar según la ubicación geográfica.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿CUÁNTO TARDA LA ENTREGA DE LOS PRODUCTOS?
+        </div>
+        <div class="faq-answer">
+          <p>
+            El tiempo de entrega estándar es de 3 a 5 días hábiles en zonas
+            urbanas, y de 5 a 10 días hábiles en zonas rurales o más alejadas.
+            Durante temporadas altas puede haber ligeras demoras.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿QUÉ DEBO HACER SI UN PRODUCTO ESTÁ FALLADO?
+        </div>
+        <div class="faq-answer">
+          <p>
+            Si recibes un producto con fallos de fabrica, por favor contacta a
+            nuestro servicio de atención al cliente. Te ayudaremos con la
+            devolución o reemplazo.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿PUEDO RETIRAR LOS PRODUCTOS EN PERSONA?</div>
+        <div class="faq-answer">
+          <p>
+            Sí, contamos con opción de retiro en tienda. Recibirás un mensaje al
+            WhatsApp cuando tu pedido esté listo para retirar en la sucursal.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿CÓMO SE PUEDE HACER UN PEDIDO?</div>
+        <div class="faq-answer">
+          <p>Puedes realizar tu pedido mediante nuestro WhatsApp. </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">¿TIENEN GARANTÍA LOS PRODUCTOS?</div>
+        <div class="faq-answer">
+          <p>
+            Todos nuestros productos cuentan con garantía oficial del
+            fabricante. El período de garantía varía según el tipo de producto,
+            desde 6 meses hasta 2 años en algunos casos.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿SE PUEDE PAGAR CON DOS FORMAS DE PAGO DISTINTOS?
+        </div>
+        <div class="faq-answer">
+          <p>
+            Actualmente no es posible dividir el pago entre dos métodos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach((faqItem) => {
+          faqItem.classList.remove("active");
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    });
+  </script>
+</MainLayout>
