@@ -439,7 +439,7 @@ export const products = [
     description: "Funda y soporte de celular para bici y moto",
     detailedDescription:
       "Soporte con funda diseñado aprueba de agua, protege tu celular de lluvias suaves o intensas, no filtra agua y no deja pasar la humedad.",
-    price: "$2.32 USD",
+    price: "$1.89 USD",
     image:
       "/images/productos/accesorios/soporte/moto/waterproof/waterproof.webp",
     gallery: [
@@ -455,7 +455,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.07 USD",
+    price: "$1.10 USD",
     image:
       "/images/productos/accesorios/soporte/auto/mount/mount.webp",
     gallery: [
@@ -472,7 +472,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$0.66 USD",
+    price: "$2.32 USD",
     image:
       "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
     gallery: [
@@ -489,7 +489,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.16 USD",
+    price: "$1.20 USD",
     image:
       "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
@@ -507,7 +507,7 @@ export const products = [
     description: "Soporte de celular para auto tipo universal",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.89 USD",
+    price: "$0.66 USD",
     image:
       "/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
     gallery: [
