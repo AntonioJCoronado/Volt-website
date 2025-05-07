@@ -71,7 +71,7 @@ export const products = [
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado. 5 horas de bateria",
-    price: "$0.43 USD",
+    price: "$0.43 USD X 400 UNIDADES",
     image: "/images/productos/volt/auriculares/er19/er19.webp",
     gallery: [
       "/images/productos/volt/auriculares/er19/er19.webp",
@@ -86,7 +86,7 @@ export const products = [
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado.",
-    price: "$0.60 USD",
+    price: "$0.60 USD X 400 UNIDADES",
     image: "/images/productos/volt/auriculares/er22/er22.webp",
     gallery: [
       "/images/productos/volt/auriculares/er22/er22.webp",
@@ -101,7 +101,7 @@ export const products = [
     description: "Carga rapida con conexión Lightning para iPhone",
     detailedDescription:
       "Cable marca Volt con conexión lightning para iPhone está diseñada para ofrecer carga rapida a los dispositivos de la marca iPhone.",
-    price: "$0.37 USD",
+    price: "$0.37 USD X 350 UNIDADES",
     image: "/images/productos/volt/cables/lightning/caja_5a.webp",
     gallery: [
       "/images/productos/volt/cables/lightning/caja_5a.webp",
@@ -115,7 +115,7 @@ export const products = [
     description: "Carga rapida con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.29 USD",
+    price: "$0.29 USD X 350 UNIDADES",
     image: "/images/productos/volt/cables/microv8/caja_5a.webp",
     gallery: [
       "/images/productos/volt/cables/microv8/caja_5a.webp",
@@ -129,7 +129,7 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.31 USD",
+    price: "$0.31 USD X 350 UNIDADES",
     image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
     category: "volt",
@@ -141,7 +141,7 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.53 USD",
+    price: "$0.53 USD X 350 UNIDADES",
     image: "/images/productos/volt/cables/tipoc/bolsa_5a.webp",
     gallery: [
       "/images/productos/volt/cables/tipoc/bolsa_5a.webp",
@@ -156,7 +156,7 @@ export const products = [
     description: "Cable de carga rapida con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.51 USD",
+    price: "$0.51 USD X 350 UNIDADES",
     image: "/images/productos/volt/cables/microv8/bolsa_5a.webp",
     gallery: [
       "/images/productos/volt/cables/microv8/bolsa_5a.webp",
@@ -171,7 +171,7 @@ export const products = [
     description: "Cable enrollado con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, cable enrollado.",
-    price: "$0.55 USD",
+    price: "$0.55 USD X 350 UNIDADES",
     image:
       "/images/productos/volt/cables/tipoc/enrollado_5.1a.webp",
     gallery: [
@@ -186,7 +186,7 @@ export const products = [
     description: "Cable enrollado con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles, cable enrollado.",
-    price: "$0.50 USD",
+    price: "$0.50 USD X 350 UNIDADES",
     image:
       "/images/productos/volt/cables/microv8/enrollado_5.1a.webp",
     gallery: [
@@ -201,7 +201,7 @@ export const products = [
     description: "Cable mallado con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
-    price: "$0.43 USD",
+    price: "$0.43 USD X 420 UNIDADES",
     image: "/images/productos/volt/cables/tipoc/mallado_5a.webp",
     gallery: [
       "/images/productos/volt/cables/tipoc/mallado_5a.webp",
@@ -216,7 +216,7 @@ export const products = [
     description: "Cable de carga y datos con conexión Micro V8 para celulares",
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles, cable de carga y datos.",
-    price: "$0.44 USD",
+    price: "$0.44 USD X 350 UNIDADES",
     image:
       "/images/productos/volt/cables/microv8/cargadatos_5.1a.webp",
     gallery: [
@@ -231,7 +231,7 @@ export const products = [
     description: "Cable de carga y datos con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, cable de carga y datos.",
-    price: "$0.51 USD",
+    price: "$0.51 USD X 350 UNIDADES",
     image:
       "/images/productos/volt/cables/tipoc/cargadatos_5.1a.webp",
     gallery: [
@@ -246,7 +246,7 @@ export const products = [
     description: "Cancelación de ruido, incluye micrófono integrado",
     detailedDescription:
       "Auriculares P9 con cancelación activa de ruido te permiten sumergirte completamente en tu música. Con hasta 10 horas de batería, son buenos para viajes largos. Resistentes al agua. Incluye micrófono integrado",
-    price: "$4.00 USD",
+    price: "$4.00 USD X 80 UNIDADES",
     image: "/images/productos/audio/auriculares/p9/p9.webp",
     gallery: ["/images/productos/audio/auriculares/p9/p9.webp"],
     category: "audio",
@@ -259,7 +259,7 @@ export const products = [
       "Bluetooth 5.0, resistente al agua, 15h batería, incluye micrófono integrado",
     detailedDescription:
       "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
-    price: "$2.37 USD",
+    price: "$2.37 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/p47/p47.webp",
     gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
     category: "audio",
@@ -271,7 +271,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$2.90 USD",
+    price: "$2.90 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/a6s/a6s.webp",
     gallery: [
       "images/productos/audio/auriculares/a6s/a6s.webp",
@@ -286,7 +286,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Los auriculares inalámbricos E6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 3 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$3.14 USD",
+    price: "$3.14 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/e6s/e6s.webp",
     gallery: [
       "/images/productos/audio/auriculares/e6s/e6s.webp",
@@ -303,7 +303,7 @@ export const products = [
       "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49 USD",
+    price: "$3.49 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/f9/f9.webp",
     gallery: [
       "/images/productos/audio/auriculares/f9/f9.webp",
@@ -320,7 +320,7 @@ export const products = [
       "Bluetooth 5.0, resistente al agua, 2h batería continua, luz led integrado",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49 USD",
+    price: "$3.49 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/m10/m10.webp",
     gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
     category: "audio",
@@ -332,7 +332,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$2.80 USD",
+    price: "$2.80 USD X 100 UNIDADES",
     image: "/images/productos/audio/auriculares/pro3/pro3.webp",
     gallery: [
       "/images/productos/audio/auriculares/pro3/pro3.webp",
@@ -439,7 +439,7 @@ export const products = [
     description: "Funda y soporte de celular para bici y moto",
     detailedDescription:
       "Soporte con funda diseñado aprueba de agua, protege tu celular de lluvias suaves o intensas, no filtra agua y no deja pasar la humedad.",
-    price: "$1.89 USD",
+    price: "$1.89 USD X 100 UNIDADES",
     image:
       "/images/productos/accesorios/soporte/moto/waterproof/waterproof.webp",
     gallery: [
@@ -455,7 +455,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.10 USD",
+    price: "$1.10 USD X 100 UNIDADES",
     image:
       "/images/productos/accesorios/soporte/auto/mount/mount.webp",
     gallery: [
@@ -472,7 +472,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$2.32 USD",
+    price: "$2.32 USD X 100 UNIDADES",
     image:
       "/images/productos/accesorios/soporte/auto/mobileholder/mobileholder.webp",
     gallery: [
@@ -489,7 +489,7 @@ export const products = [
     description: "Soporte de celular para auto",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.20 USD",
+    price: "$1.20 USD X 100 UNIDADES",
     image:
       "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
@@ -507,7 +507,7 @@ export const products = [
     description: "Soporte de celular para auto tipo universal",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$0.66 USD",
+    price: "$0.66 USD X 100 UNIDADES",
     image:
       "/images/productos/accesorios/soporte/auto/universalholder/universalholder.webp",
     gallery: [
