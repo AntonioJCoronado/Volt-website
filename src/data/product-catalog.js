@@ -18,7 +18,8 @@
  * @property {string} name - Nombre del producto
  * @property {string} description - Descripción corta
  * @property {string} detailedDescription - Descripción detallada
- * @property {string} price - Precio formateado
+ * @property {string} price - Precio por bulto actual
+ * @property {string} minimumPrice - Precio mínimo garantizado (100k)
  * @property {string} image - URL de la imagen principal
  * @property {string[]} gallery - URLs de las imágenes de la galería
  * @property {string} category - ID de la categoría
@@ -66,12 +67,227 @@ export const categories = [
 /** @type {Product[]} */
 export const products = [
   {
+    id: "1002",
+    name: "Auriculares Inalambricos P47",
+    description:
+      "Bluetooth 5.0, resistente al agua, 15h batería, incluye micrófono integrado",
+    detailedDescription:
+      "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
+    price: "$3.21 USD X 100 UNIDADES",
+    minimumPrice: "$3.71 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/p47/p47.webp",
+    gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1003",
+    name: "Auriculares Inalambricos A6S",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
+    price: "$3.55 USD X 100 UNIDADES",
+    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/a6s/a6s.webp",
+    gallery: [
+      "/images/productos/audio/auriculares/a6s/a6s.webp",
+      "/images/productos/audio/auriculares/a6s/a6s_01.webp",
+    ],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1004",
+    name: "Auriculares Inalambricos F9",
+    description:
+      "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
+    price: "$3.81 USD X 100 UNIDADES",
+    minimumPrice: "$4.40 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/f9/f9.webp",
+    gallery: [
+      "/images/productos/audio/auriculares/f9/f9.webp",
+      "/images/productos/audio/auriculares/f9/f9_01.webp",
+      "/images/productos/audio/auriculares/f9/f9_02.webp",
+    ],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1005",
+    name: "Auriculares Inalambricos M10",
+    description:
+      "Bluetooth 5.0, resistente al agua, 2h batería continua, luz led integrado",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
+    price: "$3.93 USD X 100 UNIDADES",
+    minimumPrice: "$4.54 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/m10/m10.webp",
+    gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1006",
+    name: "Auriculares Inalambricos Airpods Colores PRO3",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods Colores PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$3.55 USD X 100 UNIDADES",
+    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/pro3/pro3.webp",
+    gallery: ["/images/productos/audio/auriculares/pro3/pro3.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1007",
+    name: "Auriculares Inalambricos PRO 80",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PRO 80. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$6.68 USD X 100 UNIDADES",
+    minimumPrice: "$7.71 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/pro80/pro80.webp",
+    gallery: ["/images/productos/audio/auriculares/pro80/pro80.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1008",
+    name: "Auriculares Inalambricos inpods i12",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos inpods i12. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$3.67 USD X 100 UNIDADES",
+    minimumPrice: "$4.23 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/i12/i12.webp",
+    gallery: ["/images/productos/audio/auriculares/i12/i12.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1009",
+    name: "Auriculares Inalambricos inpods PG580",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PG580. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$8.92 USD X 80 UNIDADES",
+    minimumPrice: "$10.29 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/pg580/pg580.webp",
+    gallery: ["/images/productos/audio/auriculares/pg580/pg580.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1010",
+    name: "Auriculares Inalambricos BASS 900",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos BASS 900. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$8.83 USD X 80 UNIDADES",
+    minimumPrice: "$10.18 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/bass900/bass900.webp",
+    gallery: ["/images/productos/audio/auriculares/bass900/bass900.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1011",
+    name: "Auriculares S5830",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares S5830. Su diseño te brinda comodidad y un ajuste seguro. Con el micrófono incorporado, podrás realizar llamadas con claridad.",
+    price: "$0.72 USD X 1000 UNIDADES",
+    minimumPrice: "$0.83 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/s5830/s5830.webp",
+    gallery: ["/images/productos/audio/auriculares/s5830/s5830.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1012",
+    name: "Auriculares Inalambricos 5 COLORES",
+    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
+    detailedDescription:
+      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos 5 COLORES SURTIDOS S. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
+    price: "$3.55 USD X 100 UNIDADES",
+    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    image: "/images/productos/audio/auriculares/5colores/5colores.webp",
+    gallery: ["/images/productos/audio/auriculares/5colores/5colores.webp"],
+    category: "audio",
+    subcategory: "auriculares",
+  },
+  {
+    id: "1013",
+    name: "Cable 5A MALLADO TIPO C",
+    description: "Cable mallado con conexión Tipo C para celulares",
+    detailedDescription:
+      "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
+    price: "$0.53 USD X 500 UNIDADES",
+    minimumPrice: "$0.62 USD (MINIMO $100K)",
+    image: "/images/productos/volt/cables/tipoc/mallado_5a.webp",
+    gallery: [
+      "/images/productos/volt/cables/tipoc/mallado_5a.webp",
+      "/images/productos/volt/cables/tipoc/mallado_5a_01.webp",
+    ],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+  {
+    id: "1014",
+    name: "Cable 5A TIPO C",
+    description: "Carga rapida con conexión Tipo C para celulares",
+    detailedDescription:
+      "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
+    price: "$0.37 USD X 500 UNIDADES",
+    minimumPrice: "$0.43 USD (MINIMO $100K)",
+    image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
+    gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+  {
+    id: "1015",
+    name: "Cable 5A Micro V8",
+    description: "Carga rapida con conexión Micro V8 para celulares",
+    detailedDescription:
+      "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
+    price: "$0.47 USD X 500 UNIDADES",
+    minimumPrice: "$0.54 USD (MINIMO $100K)",
+    image: "/images/productos/volt/cables/microv8/caja_5a.webp",
+    gallery: [
+      "/images/productos/volt/cables/microv8/caja_5a.webp",
+    ],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+  {
+    id: "1016",
+    name: "Cable 5A IPHONE",
+    description: "Carga rapida con conexión Lightning para iPhone",
+    detailedDescription:
+      "Cable marca Volt con conexión lightning para iPhone está diseñada para ofrecer carga rapida a los dispositivos de la marca iPhone.",
+    price: "$0.56 USD X 500 UNIDADES",
+    minimumPrice: "$0.65 USD (MINIMO $100K)",
+    image: "/images/productos/volt/cables/lightning/caja_5a.webp",
+    gallery: [
+      "/images/productos/volt/cables/lightning/caja_5a.webp",
+    ],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+
+  /** 
+  {
     id: "VOLT-AU1",
     name: "Auriculares ER-19",
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado. 5 horas de bateria",
     price: "$0.43 USD X 400 UNIDADES",
+    minimumPrice: "$0.50 USD (MINIMO $100K)",
     image: "/images/productos/volt/auriculares/er19/er19.webp",
     gallery: [
       "/images/productos/volt/auriculares/er19/er19.webp",
@@ -94,46 +310,6 @@ export const products = [
     ],
     category: "volt",
     subcategory: "auriculares_volt",
-  },
-  {
-    id: "VOLT-CL1",
-    name: "Cable 5A IPHONE",
-    description: "Carga rapida con conexión Lightning para iPhone",
-    detailedDescription:
-      "Cable marca Volt con conexión lightning para iPhone está diseñada para ofrecer carga rapida a los dispositivos de la marca iPhone.",
-    price: "$0.37 USD X 350 UNIDADES",
-    image: "/images/productos/volt/cables/lightning/caja_5a.webp",
-    gallery: [
-      "/images/productos/volt/cables/lightning/caja_5a.webp",
-    ],
-    category: "volt",
-    subcategory: "cables_volt",
-  },
-  {
-    id: "VOLT-CV1",
-    name: "Cable 5A V8",
-    description: "Carga rapida con conexión Micro V8 para celulares",
-    detailedDescription:
-      "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.29 USD X 350 UNIDADES",
-    image: "/images/productos/volt/cables/microv8/caja_5a.webp",
-    gallery: [
-      "/images/productos/volt/cables/microv8/caja_5a.webp",
-    ],
-    category: "volt",
-    subcategory: "cables_volt",
-  },
-  {
-    id: "VOLT-CTC1",
-    name: "Cable 5A TIPO C",
-    description: "Carga rapida con conexión Tipo C para celulares",
-    detailedDescription:
-      "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$0.31 USD X 350 UNIDADES",
-    image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
-    gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
-    category: "volt",
-    subcategory: "cables_volt",
   },
   {
     id: "VOLT-CTC2",
@@ -196,21 +372,6 @@ export const products = [
     subcategory: "cables_volt",
   },
   {
-    id: "VOLT-CTC4",
-    name: "Cable 5A MALLADO TIPO C",
-    description: "Cable mallado con conexión Tipo C para celulares",
-    detailedDescription:
-      "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
-    price: "$0.43 USD X 420 UNIDADES",
-    image: "/images/productos/volt/cables/tipoc/mallado_5a.webp",
-    gallery: [
-      "/images/productos/volt/cables/tipoc/mallado_5a.webp",
-      "/images/productos/volt/cables/tipoc/mallado_5a_01.webp",
-    ],
-    category: "volt",
-    subcategory: "cables_volt",
-  },
-  {
     id: "VOLT-CV4",
     name: "Cable 5.1A de carga y datos V8",
     description: "Cable de carga y datos con conexión Micro V8 para celulares",
@@ -253,34 +414,6 @@ export const products = [
     subcategory: "auriculares",
   },
   {
-    id: "AUD-H2",
-    name: "Auriculares Inalambricos P47",
-    description:
-      "Bluetooth 5.0, resistente al agua, 15h batería, incluye micrófono integrado",
-    detailedDescription:
-      "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
-    price: "$2.37 USD X 100 UNIDADES",
-    image: "/images/productos/audio/auriculares/p47/p47.webp",
-    gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
-    category: "audio",
-    subcategory: "auriculares",
-  },
-  {
-    id: "AUD-H3",
-    name: "Auriculares Inalambricos A6S",
-    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
-    detailedDescription:
-      "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$2.90 USD X 100 UNIDADES",
-    image: "/images/productos/audio/auriculares/a6s/a6s.webp",
-    gallery: [
-      "images/productos/audio/auriculares/a6s/a6s.webp",
-      "/images/productos/audio/auriculares/a6s/a6s_01.webp",
-    ],
-    category: "audio",
-    subcategory: "auriculares",
-  },
-  {
     id: "AUD-H4",
     name: "Auriculares Inalambricos E6S",
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
@@ -292,50 +425,6 @@ export const products = [
       "/images/productos/audio/auriculares/e6s/e6s.webp",
       "/images/productos/audio/auriculares/e6s/e6s_01.webp",
       "/images/productos/audio/auriculares/e6s/e6s_02.webp",
-    ],
-    category: "audio",
-    subcategory: "auriculares",
-  },
-  {
-    id: "AUD-H5",
-    name: "Auriculares Inalambricos F9",
-    description:
-      "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
-    detailedDescription:
-      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49 USD X 100 UNIDADES",
-    image: "/images/productos/audio/auriculares/f9/f9.webp",
-    gallery: [
-      "/images/productos/audio/auriculares/f9/f9.webp",
-      "/images/productos/audio/auriculares/f9/f9_01.webp",
-      "/images/productos/audio/auriculares/f9/f9_02.webp",
-    ],
-    category: "audio",
-    subcategory: "auriculares",
-  },
-  {
-    id: "AUD-H6",
-    name: "Auriculares Inalambricos M10",
-    description:
-      "Bluetooth 5.0, resistente al agua, 2h batería continua, luz led integrado",
-    detailedDescription:
-      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.49 USD X 100 UNIDADES",
-    image: "/images/productos/audio/auriculares/m10/m10.webp",
-    gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
-    category: "audio",
-    subcategory: "auriculares",
-  },
-  {
-    id: "AUD-H7",
-    name: "Auriculares Inalambricos Airpods PRO3",
-    description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
-    detailedDescription:
-      "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$2.80 USD X 100 UNIDADES",
-    image: "/images/productos/audio/auriculares/pro3/pro3.webp",
-    gallery: [
-      "/images/productos/audio/auriculares/pro3/pro3.webp",
     ],
     category: "audio",
     subcategory: "auriculares",
@@ -563,4 +652,5 @@ export const products = [
     category: "accesorios",
     subcategory: "lamparas",
   },
+*/
 ];

@@ -22,6 +22,7 @@ interface Product {
   name: string;
   description: string;
   price: string;
+  minimumPrice: string;
   image: string;
   category: string;
   subcategory: string;
@@ -675,6 +676,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
               </h3>
               <p className="product-description">{product.description}</p>
               <p className="product-price">{product.price}</p>
+              <p className="product-minimumPrice">{product.minimumPrice}</p>
               <a
                 href={`/productos/${product.id}`}
                 className="product-btn"

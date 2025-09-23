@@ -515,6 +515,14 @@
   margin-bottom: var(--spacing-md);
 }
 
+.product-minimumPrice {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: red;
+  margin-top: auto;
+  margin-bottom: var(--spacing-md);
+}
+
 .product-btn {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -643,6 +651,11 @@
     margin: 15px 0;
   }
 
+  .products-grid.list-view .product-minimumPrice {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+
   .products-grid.list-view .product-btn {
     width: 100%;
     max-width: 300px;
@@ -754,6 +767,11 @@
   }
 
   .product-price {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .product-minimumPrice {
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
