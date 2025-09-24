@@ -440,8 +440,11 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad.",
     price: "$4.72 USD X 200 UNIDADES",
     minimumPrice: "$4800 ARS (MINIMO $100K)",
-    image: "/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp",
-    gallery: ["/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp"],
+    image:
+      "/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp",
+    gallery: [
+      "/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp",
+    ],
     category: "accesorios",
     subcategory: "soportes",
   },
@@ -453,10 +456,122 @@ export const products = [
       "Un accesorio esencial para aquellos que buscan comodidad.",
     price: "$4.24 USD X 60 UNIDADES",
     minimumPrice: "$4500 ARS (MINIMO $100K)",
-    image: "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp",
-    gallery: ["/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp", "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4_01.webp"],
+    image:
+      "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp",
+    gallery: [
+      "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp",
+      "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4_01.webp",
+    ],
     category: "accesorios",
     subcategory: "soportes",
+  },
+  {
+    id: "1030",
+    name: "RECEPTOR BLUETOOTH VOLT",
+    description: "Receptor bluetooth",
+    detailedDescription:
+      "Un accesorio esencial para aquellos que buscan comodidad.",
+    price: "$0.92 USD X 500 UNIDADES",
+    minimumPrice: "$2400 ARS (MINIMO $100K)",
+    image: "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
+    gallery: [
+      "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
+    ],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+  {
+    id: "1031",
+    name: "RECEPTOR BLUETOOTH IMEG",
+    description: "Receptor bluetooth",
+    detailedDescription:
+      "Un accesorio esencial para aquellos que buscan comodidad.",
+    price: "$1.23 USD X 500 UNIDADES",
+    minimumPrice: "$2400 ARS (MINIMO $100K)",
+    image: "/images/productos/volt/cables/receptorbluetooth/receptor-imeg.webp",
+    gallery: [
+      "/images/productos/volt/cables/receptorbluetooth/receptor-imeg.webp",
+    ],
+    category: "volt",
+    subcategory: "cables_volt",
+  },
+  {
+    id: "1033",
+    name: "SMARTWATCH 3 MALLAS",
+    description: "SMARTWATCH CON 3 MALLAS",
+    detailedDescription:
+      "Un accesorio esencial para aquellos que buscan comodidad.",
+    price: "$5.56 USD X 100 UNIDADES",
+    minimumPrice: "$19300 ARS (MINIMO $100K)",
+    image:
+      "/images/productos/dispositivo/inteligente/smartwatch/3mallas/3mallas.webp",
+    gallery: [
+      "/images/productos/dispositivo/inteligente/smartwatch/3mallas/3mallas.webp",
+    ],
+    category: "dispositivo_inteligente",
+    subcategory: "smartwatch",
+  },
+  {
+    id: "1035",
+    name: "PARLANTE M400",
+    description: "Parlante inalambrico con luz.",
+    detailedDescription:
+      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
+    price: "$3.87 USD X 100 UNIDADES",
+    minimumPrice: "$4800 ARS (MINIMO $100K)",
+    image: "/images/productos/audio/parlantes/m400/m400.webp",
+    gallery: [
+      "/images/productos/audio/parlantes/m400/m400.webp",
+      "/images/productos/audio/parlantes/m400/m400_01.webp",
+    ],
+    category: "audio",
+    subcategory: "parlantes",
+  },
+  {
+    id: "1036",
+    name: "PARLANTE PORTATIL 3",
+    description: "Parlante bluetooth",
+    detailedDescription:
+      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
+    price: "$3,25 USD X 80 UNIDADES",
+    minimumPrice: "$8000 ARS (MINIMO $100K)",
+    image: "/images/productos/audio/parlantes/portatil3/portatil3.webp",
+    gallery: [
+      "/images/productos/audio/parlantes/portatil3/portatil3.webp",
+      "/images/productos/audio/parlantes/portatil3/portatil3_01.webp",
+    ],
+    category: "audio",
+    subcategory: "parlantes",
+  },
+  {
+    id: "1037",
+    name: "PARLANTE LAMPARA G",
+    description: "Parlante bluetooth",
+    detailedDescription:
+      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
+    price: "$7.44 USD X 30 UNIDADES",
+    minimumPrice: "$10100 ARS (MINIMO $100K)",
+    image: "/images/productos/audio/parlantes/lamparag/lamparag.webp",
+    gallery: ["/images/productos/audio/parlantes/lamparag/lamparag.webp"],
+    category: "audio",
+    subcategory: "parlantes",
+  },
+  {
+    id: "1042",
+    name: "Lampara Escritorio LED",
+    description:
+      "Crea un ambiente relajante en tu dormitorio o cualquier otra habitación de tu hogar",
+    detailedDescription:
+      "Esta excelente luz de noche ideal para iluminar escritorios.",
+    price: "$7.64 USD X 12 UNIDADES",
+    minimumPrice: "$11600 ARS (MINIMO $100K)",
+    image:
+      "/images/productos/accesorios/lampara/escritorio/lampara-escritorio.webp",
+    gallery: [
+      "/images/productos/accesorios/lampara/escritorio/lampara-escritorio.webp",
+    ],
+    category: "accesorios",
+    subcategory: "lamparas",
   },
 
   /** 
@@ -653,21 +768,6 @@ export const products = [
     ],
     category: "audio",
     subcategory: "microfonos",
-  },
-  {
-    id: "PARL-1",
-    name: "Parlante M400",
-    description: "Parlante inalambrico con luz.",
-    detailedDescription:
-      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$2.77 USD",
-    image: "/images/productos/audio/parlantes/m400/m400.webp",
-    gallery: [
-      "/images/productos/audio/parlantes/m400/m400.webp",
-      "/images/productos/audio/parlantes/m400/m400_01.webp",
-    ],
-    category: "audio",
-    subcategory: "parlantes",
   },
   {
     id: "PARL-2",
