@@ -14,11 +14,7 @@ const { title, description, currentPage } = Astro.props;
 
     <link rel="stylesheet" href="/fonts/stylesheet.css" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon/favicon.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
 
     <link
       rel="icon"
@@ -83,20 +79,17 @@ const { title, description, currentPage } = Astro.props;
         ≡
       </div>
       <nav class="menu" role="navigation">
-        <a href="/" class={currentPage === "home" ? "active" : ""}
-          >Inicio</a
-        >
+        <a href="/" class={currentPage === "home" ? "active" : ""}>Inicio</a>
         <a
           href="/preguntas-frecuentes"
-          class={currentPage === "preguntas-frecuentes" ? "active" : ""}>Preguntas Frecuentes</a
+          class={currentPage === "preguntas-frecuentes" ? "active" : ""}
+          >Preguntas Frecuentes</a
         >
-        <a
-          href="/productos"
-          class={currentPage === "productos" ? "active" : ""}>Productos</a
+        <a href="/productos" class={currentPage === "productos" ? "active" : ""}
+          >Productos</a
         >
-        <a
-          href="/contacto"
-          class={currentPage === "contacto" ? "active" : ""}>Contacto</a
+        <a href="/contacto" class={currentPage === "contacto" ? "active" : ""}
+          >Contacto</a
         >
       </nav>
     </header>
@@ -105,11 +98,57 @@ const { title, description, currentPage } = Astro.props;
       <slot />
     </main>
 
+    <!-- Botón flotante de WhatsApp -->
+    <div
+      id="whatsapp-button"
+      style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.5s ease;
+    "
+    >
+      <a
+        href="https://wa.me/5491154962132?text=¡Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20productos%20VOLT."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+        style="
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 60px;
+           height: 60px;
+           background-color: #25d366;
+           border-radius: 50%;
+           text-decoration: none;
+           color: white;
+           box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+           transition: all 0.3s ease;
+           position: relative;
+         "
+      >
+        <img
+          style="filter: brightness(0) invert(1);"
+          src="/images/logos/logo-whatsapp.svg"
+          alt="WhatsApp"
+          loading="lazy"
+          width="38"
+          height="38"
+        />
+      </a>
+    </div>
+
     <footer class="footer">
       <div class="nav-container">
         <nav class="footer-nav" role="navigation">
           <a href="/" class="nav-link">Inicio</a>
-          <a href="/preguntas-frecuentes" class="nav-link">Preguntas Frecuentes</a>
+          <a href="/preguntas-frecuentes" class="nav-link"
+            >Preguntas Frecuentes</a
+          >
           <a href="/productos" class="nav-link">Productos</a>
           <a href="/contacto" class="nav-link">Contacto</a>
         </nav>
@@ -147,7 +186,101 @@ const { title, description, currentPage } = Astro.props;
           });
         }
       });
+
+      // Script para WhatsApp
+      const whatsappButton = document.getElementById("whatsapp-button");
+
+      if (whatsappButton) {
+        console.log("WhatsApp button found!"); // Para debug
+
+        // Mostrar el botón después de 1 segundo
+        setTimeout(() => {
+          whatsappButton.style.opacity = "1";
+          whatsappButton.style.transform = "translateY(0)";
+          console.log("WhatsApp button shown!"); // Para debug
+        }, 1000);
+
+        // Efecto hover
+        const link = whatsappButton.querySelector("a");
+        if (link) {
+          link.addEventListener("mouseenter", () => {
+            link.style.backgroundColor = "#128c7e";
+            link.style.transform = "scale(1.1)";
+            link.style.boxShadow = "0 6px 20px rgba(37, 211, 102, 0.6)";
+          });
+
+          link.addEventListener("mouseleave", () => {
+            link.style.backgroundColor = "#25d366";
+            link.style.transform = "scale(1)";
+            link.style.boxShadow = "0 4px 12px rgba(37, 211, 102, 0.4)";
+          });
+        }
+
+        // Efecto de pulso cada 8 segundos
+        setInterval(() => {
+          if (link) {
+            link.style.animation = "none";
+            setTimeout(() => {
+              link.style.animation = "whatsapp-pulse 1s ease-in-out";
+            }, 10);
+          }
+        }, 8000);
+      } else {
+        console.log("WhatsApp button NOT found!"); // Para debug
+      }
     </script>
+
+    <style>
+      @keyframes whatsapp-pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
+        50% {
+          transform: scale(1.15);
+          box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
+      }
+
+      /* Responsive para WhatsApp */
+      @media (max-width: 768px) {
+        #whatsapp-button {
+          bottom: 15px !important;
+          right: 15px !important;
+        }
+
+        #whatsapp-button a {
+          width: 55px !important;
+          height: 55px !important;
+        }
+
+        #whatsapp-button img {
+          width: 28px !important;
+          height: 28px !important;
+        }
+      }
+
+      @media (max-width: 576px) {
+        #whatsapp-button {
+          bottom: 10px !important;
+          right: 10px !important;
+        }
+
+        #whatsapp-button a {
+          width: 50px !important;
+          height: 50px !important;
+        }
+
+        #whatsapp-button img {
+          width: 26px !important;
+          height: 26px !important;
+        }
+      }
+    </style>
 
     <slot name="scripts" />
   </body>

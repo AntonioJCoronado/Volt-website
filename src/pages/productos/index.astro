@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProductsGrid from "../../components/react/ProductsGrid";
 import { categories, products } from "../../data/product-catalog";
-import "../../styles/productos.css"
+import "../../styles/productos.css";
 
 // Obtener parámetros de la URL
 const categoria = Astro.url.searchParams.get("categoria") || "todos";
@@ -31,7 +31,8 @@ const currentPage = parseInt(paginaParam) || 1;
         <span class="title-blue">CATÁLOGO</span>
       </h1>
       <p class="hero-subtitle">
-        ¡Explora nuestra exclusiva gama de productos tecnológicos a precios competitivos!
+        Hoy comprás, hoy despachamos. Con 60 días de garantía, comprar nunca fue
+        tan SIMPLE.
       </p>
     </div>
   </section>
