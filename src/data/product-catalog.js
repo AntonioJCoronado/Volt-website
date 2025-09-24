@@ -74,7 +74,7 @@ export const products = [
     detailedDescription:
       "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
     price: "$3.21 USD X 100 UNIDADES",
-    minimumPrice: "$3.71 USD (MINIMO $100K)",
+    minimumPrice: "$4300 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/p47/p47.webp",
     gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
     category: "audio",
@@ -87,7 +87,7 @@ export const products = [
     detailedDescription:
       "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
     price: "$3.55 USD X 100 UNIDADES",
-    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    minimumPrice: "$4800 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/a6s/a6s.webp",
     gallery: [
       "/images/productos/audio/auriculares/a6s/a6s.webp",
@@ -104,7 +104,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
     price: "$3.81 USD X 100 UNIDADES",
-    minimumPrice: "$4.40 USD (MINIMO $100K)",
+    minimumPrice: "$5400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/f9/f9.webp",
     gallery: [
       "/images/productos/audio/auriculares/f9/f9.webp",
@@ -122,7 +122,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
     price: "$3.93 USD X 100 UNIDADES",
-    minimumPrice: "$4.54 USD (MINIMO $100K)",
+    minimumPrice: "$7100 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/m10/m10.webp",
     gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
     category: "audio",
@@ -135,7 +135,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods Colores PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$3.55 USD X 100 UNIDADES",
-    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    minimumPrice: "$5400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pro3/pro3.webp",
     gallery: ["/images/productos/audio/auriculares/pro3/pro3.webp"],
     category: "audio",
@@ -148,7 +148,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PRO 80. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$6.68 USD X 100 UNIDADES",
-    minimumPrice: "$7.71 USD (MINIMO $100K)",
+    minimumPrice: "$8500 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pro80/pro80.webp",
     gallery: ["/images/productos/audio/auriculares/pro80/pro80.webp"],
     category: "audio",
@@ -161,7 +161,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos inpods i12. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$3.67 USD X 100 UNIDADES",
-    minimumPrice: "$4.23 USD (MINIMO $100K)",
+    minimumPrice: "$5500 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/i12/i12.webp",
     gallery: ["/images/productos/audio/auriculares/i12/i12.webp"],
     category: "audio",
@@ -174,7 +174,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PG580. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$8.92 USD X 80 UNIDADES",
-    minimumPrice: "$10.29 USD (MINIMO $100K)",
+    minimumPrice: "$10400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pg580/pg580.webp",
     gallery: ["/images/productos/audio/auriculares/pg580/pg580.webp"],
     category: "audio",
@@ -187,7 +187,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos BASS 900. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$8.83 USD X 80 UNIDADES",
-    minimumPrice: "$10.18 USD (MINIMO $100K)",
+    minimumPrice: "$12000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/bass900/bass900.webp",
     gallery: ["/images/productos/audio/auriculares/bass900/bass900.webp"],
     category: "audio",
@@ -200,7 +200,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares S5830. Su diseño te brinda comodidad y un ajuste seguro. Con el micrófono incorporado, podrás realizar llamadas con claridad.",
     price: "$0.72 USD X 1000 UNIDADES",
-    minimumPrice: "$0.83 USD (MINIMO $100K)",
+    minimumPrice: "$1000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/s5830/s5830.webp",
     gallery: ["/images/productos/audio/auriculares/s5830/s5830.webp"],
     category: "audio",
@@ -213,7 +213,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos 5 COLORES SURTIDOS S. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
     price: "$3.55 USD X 100 UNIDADES",
-    minimumPrice: "$4.09 USD (MINIMO $100K)",
+    minimumPrice: "$8000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/5colores/5colores.webp",
     gallery: ["/images/productos/audio/auriculares/5colores/5colores.webp"],
     category: "audio",
@@ -226,7 +226,7 @@ export const products = [
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
     price: "$0.53 USD X 500 UNIDADES",
-    minimumPrice: "$0.62 USD (MINIMO $100K)",
+    minimumPrice: "$700 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/tipoc/mallado_5a.webp",
     gallery: [
       "/images/productos/volt/cables/tipoc/mallado_5a.webp",
@@ -242,7 +242,7 @@ export const products = [
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
     price: "$0.37 USD X 500 UNIDADES",
-    minimumPrice: "$0.43 USD (MINIMO $100K)",
+    minimumPrice: "$900 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
     category: "volt",
@@ -255,7 +255,7 @@ export const products = [
     detailedDescription:
       "Cable marca Volt con conexión micro v8 ofrece carga rapida a todos sus dispositivos compatibles.",
     price: "$0.47 USD X 500 UNIDADES",
-    minimumPrice: "$0.54 USD (MINIMO $100K)",
+    minimumPrice: "$900 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/microv8/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/microv8/caja_5a.webp"],
     category: "volt",
@@ -268,7 +268,7 @@ export const products = [
     detailedDescription:
       "Cable marca Volt con conexión lightning para iPhone está diseñada para ofrecer carga rapida a los dispositivos de la marca iPhone.",
     price: "$0.56 USD X 500 UNIDADES",
-    minimumPrice: "$0.65 USD (MINIMO $100K)",
+    minimumPrice: "$1000 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/lightning/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/lightning/caja_5a.webp"],
     category: "volt",
@@ -281,7 +281,7 @@ export const products = [
     detailedDescription:
       "Cable para iPhone diseñado para ofrecer carga rapida a los dispositivos de la marca iPhone.",
     price: "$1.04 USD X 500 UNIDADES",
-    minimumPrice: "$1.20 USD (MINIMO $100K)",
+    minimumPrice: "$1900 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/tipoc/cc15.webp",
     gallery: ["/images/productos/volt/cables/tipoc/cc15.webp"],
     category: "volt",
@@ -294,7 +294,7 @@ export const products = [
     detailedDescription:
       "Cable para iPhone diseñado para ofrecer carga rapida a los dispositivos de la marca iPhone.",
     price: "$0.93 USD X 500 UNIDADES",
-    minimumPrice: "$1.08 USD (MINIMO $100K)",
+    minimumPrice: "$1800 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/lightning/cl12.webp",
     gallery: ["/images/productos/volt/cables/lightning/cl12.webp"],
     category: "volt",
@@ -307,7 +307,7 @@ export const products = [
     detailedDescription:
       "Soporte con funda diseñado aprueba de agua, protege tu celular de lluvias suaves o intensas, no filtra agua y no deja pasar la humedad.",
     price: "$3.41 USD X 100 UNIDADES",
-    minimumPrice: "$3.94 USD (MINIMO $100K)",
+    minimumPrice: "$3800 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/soporte/moto/waterproof/waterproof.webp",
     gallery: [
@@ -324,7 +324,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$1.52 USD X 100 UNIDADES",
-    minimumPrice: "$1.75 USD (MINIMO $100K)",
+    minimumPrice: "$1900 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
       "/images/productos/accesorios/soporte/auto/under/under.webp",
@@ -342,7 +342,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$3.03 USD X 100 UNIDADES",
-    minimumPrice: "$3.49 USD (MINIMO $100K)",
+    minimumPrice: "$4400 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/ds25/ds25.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/ds25/ds25.webp"],
     category: "accesorios",
@@ -355,7 +355,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$2.88 USD X 100 UNIDADES",
-    minimumPrice: "$3.32 USD (MINIMO $100K)",
+    minimumPrice: "$5100 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/d48/d48-1.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/d48/d48-1.webp"],
     category: "accesorios",
@@ -368,7 +368,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$2.97 USD X 100 UNIDADES",
-    minimumPrice: "$3.43 USD (MINIMO $100K)",
+    minimumPrice: "$6000 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/d41/d41-1.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/d41/d41-1.webp"],
     category: "accesorios",
@@ -381,7 +381,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$3.28 USD X 100 UNIDADES",
-    minimumPrice: "$3.78 USD (MINIMO $100K)",
+    minimumPrice: "$5500 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/es06/es06.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/es06/es06.webp"],
     category: "accesorios",
@@ -394,7 +394,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
     price: "$9.88 USD X 50 UNIDADES",
-    minimumPrice: "$11.40 USD (MINIMO $100K)",
+    minimumPrice: "$10400 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/a7s/a7s.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/a7s/a7s.webp"],
     category: "accesorios",
@@ -407,7 +407,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan hacer directos o grabaciones.",
     price: "$5.59 USD X 60 UNIDADES",
-    minimumPrice: "$6.45 USD (MINIMO $100K)",
+    minimumPrice: "$12600 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/soporte/kit/microfono-luz/microfono-luz.webp",
     gallery: [
@@ -423,7 +423,7 @@ export const products = [
     description: "Mouse con bluetooth",
     detailedDescription: "Un mouse inalambrico para computadoras o portatiles.",
     price: "$2.43 USD X 100 UNIDADES",
-    minimumPrice: "$2.80 USD (MINIMO $100K)",
+    minimumPrice: "$4400 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/mouse/colores-inalambrico/colores-inalambrico.webp",
     gallery: [
@@ -439,7 +439,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
     price: "$4.72 USD X 200 UNIDADES",
-    minimumPrice: "$5.45 USD (MINIMO $100K)",
+    minimumPrice: "$4800 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp",
     gallery: ["/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp"],
     category: "accesorios",
@@ -452,7 +452,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
     price: "$4.24 USD X 60 UNIDADES",
-    minimumPrice: "$4.89 USD (MINIMO $100K)",
+    minimumPrice: "$4500 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp",
     gallery: ["/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp", "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4_01.webp"],
     category: "accesorios",
