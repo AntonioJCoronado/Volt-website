@@ -30,6 +30,16 @@
 /** @type {Category[]} */
 export const categories = [
   {
+    id: "combo",
+    name: "Combos",
+    subcategories: [],
+  },
+  {
+    id: "liquidacion",
+    name: "Liquidación",
+    subcategories: [],
+  },
+  {
     id: "volt",
     name: "Volt",
     subcategories: [
@@ -73,8 +83,8 @@ export const products = [
       "Bluetooth 5.0, resistente al agua, 15h batería, incluye micrófono integrado",
     detailedDescription:
       "Auriculares P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
-    price: "$3.21 USD X 100 UNIDADES",
-    minimumPrice: "$4300 ARS (MINIMO $100K)",
+    price: "$2..25 USD X 100 UNIDADES",
+    minimumPrice: "$3400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/p47/p47.webp",
     gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
     category: "audio",
@@ -86,7 +96,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Los auriculares inalámbricos A6s son la elección ideal para quienes buscan libertad de movimiento. Con su tecnología Bluetooth 5.0,estos auriculares funcionan con una amplia variedad de dispositivos. Con una duración máxima de batería de 2 horas y un estuche de carga, siempre estarás listo para seguir disfrutando. Además, son resistentes al agua y al polvo. No te pierdas la oportunidad de sumergirte en el mundo digital con estos auriculares que combinan funcionalidad y elegancia.",
-    price: "$3.55 USD X 100 UNIDADES",
+    price: "$3.00 USD X 100 UNIDADES",
     minimumPrice: "$4800 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/a6s/a6s.webp",
     gallery: [
@@ -103,7 +113,7 @@ export const products = [
       "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$3.81 USD X 100 UNIDADES",
+    price: "$3.50 USD X 100 UNIDADES",
     minimumPrice: "$5400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/f9/f9.webp",
     gallery: [
@@ -122,7 +132,7 @@ export const products = [
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
     price: "$3.93 USD X 100 UNIDADES",
-    minimumPrice: "$7100 ARS (MINIMO $100K)",
+    minimumPrice: "6500 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/m10/m10.webp",
     gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
     category: "audio",
@@ -134,7 +144,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos Airpods Colores PRO3. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$3.55 USD X 100 UNIDADES",
+    price: "$3.40 USD X 100 UNIDADES",
     minimumPrice: "$5400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pro3/pro3.webp",
     gallery: ["/images/productos/audio/auriculares/pro3/pro3.webp"],
@@ -147,8 +157,8 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PRO 80. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$6.68 USD X 100 UNIDADES",
-    minimumPrice: "$8500 ARS (MINIMO $100K)",
+    price: "$4.50 USD X 100 UNIDADES",
+    minimumPrice: "$6900 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pro80/pro80.webp",
     gallery: ["/images/productos/audio/auriculares/pro80/pro80.webp"],
     category: "audio",
@@ -160,7 +170,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos inpods i12. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$3.67 USD X 100 UNIDADES",
+    price: "$3.60 USD X 100 UNIDADES",
     minimumPrice: "$5500 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/i12/i12.webp",
     gallery: ["/images/productos/audio/auriculares/i12/i12.webp"],
@@ -173,7 +183,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos PG580. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$8.92 USD X 80 UNIDADES",
+    price: "$6.90 USD X 80 UNIDADES",
     minimumPrice: "$10400 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/pg580/pg580.webp",
     gallery: ["/images/productos/audio/auriculares/pg580/pg580.webp"],
@@ -186,7 +196,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos BASS 900. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias.",
-    price: "$8.83 USD X 80 UNIDADES",
+    price: "$7.80 USD X 80 UNIDADES",
     minimumPrice: "$12000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/bass900/bass900.webp",
     gallery: ["/images/productos/audio/auriculares/bass900/bass900.webp"],
@@ -199,7 +209,7 @@ export const products = [
     description: "Bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares S5830. Su diseño te brinda comodidad y un ajuste seguro. Con el micrófono incorporado, podrás realizar llamadas con claridad.",
-    price: "$0.72 USD X 1000 UNIDADES",
+    price: "$0.65 USD X 1000 UNIDADES",
     minimumPrice: "$1000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/auriculares/s5830/s5830.webp",
     gallery: ["/images/productos/audio/auriculares/s5830/s5830.webp"],
@@ -225,7 +235,7 @@ export const products = [
     description: "Cable mallado con conexión Tipo C para celulares",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles, el cable esta mallado para garantizar más resistencia.",
-    price: "$0.53 USD X 500 UNIDADES",
+    price: "$0.45 USD X 500 UNIDADES",
     minimumPrice: "$700 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/tipoc/mallado_5a.webp",
     gallery: [
@@ -242,7 +252,7 @@ export const products = [
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
     price: "$0.37 USD X 500 UNIDADES",
-    minimumPrice: "$900 ARS (MINIMO $100K)",
+    minimumPrice: "$550 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
     category: "volt",
@@ -306,7 +316,7 @@ export const products = [
     description: "Funda y soporte de celular para bici o moto",
     detailedDescription:
       "Soporte con funda diseñado aprueba de agua, protege tu celular de lluvias suaves o intensas, no filtra agua y no deja pasar la humedad.",
-    price: "$3.41 USD X 100 UNIDADES",
+    price: "$2.33 USD X 100 UNIDADES",
     minimumPrice: "$3800 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/soporte/moto/waterproof/waterproof.webp",
@@ -323,7 +333,7 @@ export const products = [
     description: "Soporte de celular para auto modelo under",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1.52 USD X 100 UNIDADES",
+    price: "$1.30 USD X 100 UNIDADES",
     minimumPrice: "$1900 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
@@ -341,7 +351,7 @@ export const products = [
     description: "Soporte de celular para auto modelo DS25",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$3.03 USD X 100 UNIDADES",
+    price: "$2.90 USD X 100 UNIDADES",
     minimumPrice: "$4400 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/ds25/ds25.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/ds25/ds25.webp"],
@@ -393,7 +403,7 @@ export const products = [
     description: "Soporte de celular para auto modelo A7S",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$9.88 USD X 50 UNIDADES",
+    price: "$6.90 USD X 50 UNIDADES",
     minimumPrice: "$10400 ARS (MINIMO $100K)",
     image: "/images/productos/accesorios/soporte/auto/a7s/a7s.webp",
     gallery: ["/images/productos/accesorios/soporte/auto/a7s/a7s.webp"],
@@ -438,7 +448,7 @@ export const products = [
     description: "Soporte para cargar mandos de PS5",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
-    price: "$4.72 USD X 200 UNIDADES",
+    price: "$3.20 USD X 200 UNIDADES",
     minimumPrice: "$4800 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/soporte/cargador/ps5/cargador-ps5.webp",
@@ -454,7 +464,7 @@ export const products = [
     description: "Soporte para cargar mandos de PS4",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
-    price: "$4.24 USD X 60 UNIDADES",
+    price: "$3.00 USD X 60 UNIDADES",
     minimumPrice: "$4500 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/soporte/cargador/ps4/cargador-ps4.webp",
@@ -472,7 +482,7 @@ export const products = [
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
     price: "$0.92 USD X 500 UNIDADES",
-    minimumPrice: "$2400 ARS (MINIMO $100K)",
+    minimumPrice: "$1700 ARS (MINIMO $100K)",
     image: "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
     gallery: [
       "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
@@ -512,12 +522,25 @@ export const products = [
     subcategory: "smartwatch",
   },
   {
+    id: "1034",
+    name: "PARLANTE K12",
+    description: "Parlante inalambrico con luz.",
+    detailedDescription:
+      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
+    price: "$4.80 USD X 100 UNIDADES",
+    minimumPrice: "$10800 ARS (MINIMO $100K)",
+    image: "/images/productos/audio/parlantes/k12/k12.webp",
+    gallery: ["/images/productos/audio/parlantes/k12/k12.webp"],
+    category: "audio",
+    subcategory: "parlantes",
+  },
+  {
     id: "1035",
     name: "PARLANTE M400",
     description: "Parlante inalambrico con luz.",
     detailedDescription:
       "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$3.87 USD X 100 UNIDADES",
+    price: "$3.10 USD X 100 UNIDADES",
     minimumPrice: "$4800 ARS (MINIMO $100K)",
     image: "/images/productos/audio/parlantes/m400/m400.webp",
     gallery: [
@@ -533,7 +556,7 @@ export const products = [
     description: "Parlante bluetooth",
     detailedDescription:
       "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$3,25 USD X 80 UNIDADES",
+    price: "$3.25 USD X 80 UNIDADES",
     minimumPrice: "$8000 ARS (MINIMO $100K)",
     image: "/images/productos/audio/parlantes/portatil3/portatil3.webp",
     gallery: [
@@ -549,8 +572,8 @@ export const products = [
     description: "Parlante bluetooth",
     detailedDescription:
       "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$7.44 USD X 30 UNIDADES",
-    minimumPrice: "$10100 ARS (MINIMO $100K)",
+    price: "$5.65 USD X 30 UNIDADES",
+    minimumPrice: "$8300 ARS (MINIMO $100K)",
     image: "/images/productos/audio/parlantes/lamparag/lamparag.webp",
     gallery: ["/images/productos/audio/parlantes/lamparag/lamparag.webp"],
     category: "audio",
@@ -563,7 +586,7 @@ export const products = [
       "Crea un ambiente relajante en tu dormitorio o cualquier otra habitación de tu hogar",
     detailedDescription:
       "Esta excelente luz de noche ideal para iluminar escritorios.",
-    price: "$7.64 USD X 12 UNIDADES",
+    price: "$7.00 USD X 12 UNIDADES",
     minimumPrice: "$11600 ARS (MINIMO $100K)",
     image:
       "/images/productos/accesorios/lampara/escritorio/lampara-escritorio.webp",
@@ -572,6 +595,229 @@ export const products = [
     ],
     category: "accesorios",
     subcategory: "lamparas",
+  },
+
+  // Combos ORDENADOS DE MENOR A MAYOR PRECIO POR MI
+
+  {
+    id: "combo-01",
+    name: "COMBO ACCESIBLE",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "3 CABLE 5A IPHONE VOLT, 3 CABLE 5A V8 VOLT, 3 CABLE 5ATIPO C VOLT, 3 CARGADOR 2.4 BOLSA TIPO C AITECH, 3 CARGADOR BOLSA 2.1A V8 AITECH, 3 AURICULAR MANOS LIBRES X83, 3 AURICULAR TIPO C 15, 3 AURICULAR INALAMBRICO F9 Y 2 CABLE AUXILIAR SOLMA",
+    price: "",
+    minimumPrice: "$50000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-01.webp",
+    gallery: ["/images/productos/combo/combo-01.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-02",
+    name: "COMBO AHORRO PANGEA",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "3 CARGADOR TIPO C 3.8A IBEK, 3 CARGADOR 4.8 V8 LEGATUS, 2 AURICULAR INALAMBRICO F9, 2 AURICULAR LH-P47, 2 AURICULAR INALAMBRICO AIRPODS COLOR Y 4 AURICULAR SAM BOLSA",
+    price: "",
+    minimumPrice: "$55000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-02.webp",
+    gallery: ["/images/productos/combo/combo-02.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-03",
+    name: "COMBO PRECIO AMIGO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "3 CARGADOR 4.8 V8 LEGATUS, 3 CARGADOR 4.8 TIPO C LEGATUS, 3 CABLE 6A CAJA V8 IBEK, 4 CABLE BOLSA V8 VOLT, 4 CABLE BOLSA TIPO C VOLT, 4 CABEZAL SUELTO IMEGA, 5 AURICULAR ER-19 VOLT, 1 AURICULAR LH-P9 Y 2 AURICULAR TWS 31 APRO",
+    price: "",
+    minimumPrice: "$59900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-03.webp",
+    gallery: ["/images/productos/combo/combo-03.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-04",
+    name: "COMBO CABLES INICIAL",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "10 CABLE VOLT BOLSA V8, 10 CABLE VOLT BOLSA TIPOC, 5 CABLE VOLT 5A V8, 5 CABLE VOLT 5A TIPOC, 5 CABLE VOLT 5A IPH,15 CABLE VOLT MALLADO TIPOC",
+    price: "",
+    minimumPrice: "$69900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-04.webp",
+    gallery: ["/images/productos/combo/combo-04.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-05",
+    name: "COMBO GAMER Y OFFICE INICIAL",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "4 MOUSEPAD, 1 CABLE POWER PARA PC, 3 MOUSE PILA INALAMBRICO, 1 AURICULAR EXTRA BASS 900, 2 MOUSE INALAMBRICO APRO, 2 CABLE HDMI 3M,3 PILA LITHIUM, 3 CABLE AUXILIAR SOLMA, 4 MOUSE INALAMBRICO COLORES",
+    price: "",
+    minimumPrice: "$79000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-05.webp",
+    gallery: ["/images/productos/combo/combo-05.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-06",
+    name: "COMBO AURICULARES PREMIUM INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "10 AURICULAR CABLE SAM BOLSA, 15 AURICULAR ER-19 VOLT, 15 AURICULAR MANOS LIBRES X83, 10 AURICULAR TIPO C15, 3 AURICULAR P9, 3 LH-P47",
+    price: "",
+    minimumPrice: "$79900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-06.webp",
+    gallery: ["/images/productos/combo/combo-06.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-07",
+    name: "COMBO EMPRENDEDOR INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription: "",
+    price: "",
+    minimumPrice: "$99900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-07.webp",
+    gallery: ["/images/productos/combo/combo-07.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-08",
+    name: "COMBO KIDS TECH INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "1 MINI IMPRESORAS, 2 CAMARA VIDEO RECARGABLE,1 LAPIZ 3D, 1 CAMARA IMPRESORA",
+    price: "",
+    minimumPrice: "$109900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-08.webp",
+    gallery: ["/images/productos/combo/combo-08.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-09",
+    name: "COMBO MEGA LUZ Y SONIDO INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "2 KIT MICROFONO, 4 FOCO GIRATORIOS, 3 LAMPARA PARLANTE, 1 LINTERNA MINERA, 1 CARRUSEL PROYECTOR, 2 LED VIDEO",
+    price: "",
+    minimumPrice: "$109900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-09.webp",
+    gallery: ["/images/productos/combo/combo-09.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-10",
+    name: "COMBO SMARTWATCH PLUS INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "2 SMARTWATCH ULTRA TBX-Y66, 1 SMARTWATCH H33 7 EN 1, 1 SMARTWATCH W26 PRO MAX Y 1 SMARTWATCH TW1000",
+    price: "",
+    minimumPrice: "$139000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-10.webp",
+    gallery: ["/images/productos/combo/combo-10.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-11",
+    name: "COMBO SUPER GAMES INTERMEDIO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "1 CONSOLA RETRO, 2 GAME STICK PRO, 2 CARGADOR JOYSTICK PS4, 2 CARGADOR JOYSTICK PS5 ",
+    price: "",
+    minimumPrice: "$159000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-11.webp",
+    gallery: ["/images/productos/combo/combo-11.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-12",
+    name: "COMBO MIX EXPERIMENTADO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "3 PLANCHA FLEQUILLERA, 5 DEPILADORA DE CRISTAL UNISEX, 2 DEPILADORA ELECTRICA 4 EN 1, 1 BOTELLA TERMICA PERSONAJES, 2 MASAJEADOR PAPADA, 2 PLANCHA 2EN1, 1 SECADOR 5EN1 MOLDEADOR Y 2 ESPEJO MAQUILLAJE LED ",
+    price: "",
+    minimumPrice: "$169000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-12.webp",
+    gallery: ["/images/productos/combo/combo-12.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-13",
+    name: "COMBO TIRA LED EXPERIMENTADO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "4 TIRA LED NEON, 3 TIRA LED 5 METROS, 5 TIRA LED 5 METROS C/BLUETOOTH Y 3 TIRA LED 10 METROS C/BLUETOOTH",
+    price: "",
+    minimumPrice: "$190000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-13.webp",
+    gallery: ["/images/productos/combo/combo-13.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-14",
+    name: "COMBO AURICULARES EXPERIMENTADO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "5 AURICULAR P9, 5 AURICULAR INALÁMBRICO M90, 1 AURICULAR T-12, 2 AURICULAR EXTRA BASS 900, 3 AURICULAR PRO80, 2 AURICULAR TWS 31 APRO, 3 AURICULAR INALAMBRICO AIRPODS, 3 AURICULAR LH-P47 Y 2 M10 AURICULARES INALAMBRICOS",
+    price: "",
+    minimumPrice: "$199900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-14.webp",
+    gallery: ["/images/productos/combo/combo-14.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-15",
+    name: "COMBO PARLANTES PRO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "3 PARLANTES A360 PRO, 3 PARLANTE PENSILVANIA, 3 PARLANTE KITS-1678, 1 CACTUS BAILARIN, 2 LAMPARA PARLANTE, 2 PARLANTE RUEDA, 1 PARLANTE CON LUZ BX-39 MINI, 2 PARLANTE SPLASH PROOF Y 1 PARLANTE PLUSE 4 MINI",
+    price: "",
+    minimumPrice: "$210000 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-15.webp",
+    gallery: ["/images/productos/combo/combo-15.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-16",
+    name: "COMBO HOME PRO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "2 RAQUETA MATAMOSQUITOS A PILA, 1 CARRUSEL PROYECTOR, 1 AFEITADORA DRAGON, 1 SELLADORA AL VACIO, 2 MINI ASPIRADORA 3 EN 1, 1 HUMIFICADOR HONGO, 2 MINI LICUADORA PORTATIL, 1 DIFUSOR AROMATICO C/LLAMA, 1 HUMIFICADOR HOGUERA, 2 RAQUETA MATAMOSQUITO, 1 LAMPARA DE ESCRITORIO Y 1 REPETIDOR DE WIFI",
+    price: "",
+    minimumPrice: "$259900 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-16.webp",
+    gallery: ["/images/productos/combo/combo-16.webp"],
+    category: "combo",
+    subcategory: "",
+  },
+  {
+    id: "combo-17",
+    name: "COMBO CAMARAS TORO",
+    description: "¡Un combo diseñado para vos!.",
+    detailedDescription:
+      "2 CAMARA AUTO, 3 CAMARA IP EXTERIOR, 2 CAMARA IP DOBLE Y 3 CAMARA IP SIMPLE",
+    price: "",
+    minimumPrice: "$295500 ARS (MINIMO $100K)",
+    image: "/images/productos/combo/combo-17.webp",
+    gallery: ["/images/productos/combo/combo-17.webp"],
+    category: "combo",
+    subcategory: "",
   },
 
   /** 
