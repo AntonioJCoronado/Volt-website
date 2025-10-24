@@ -1,41 +1,65 @@
-"use client";
+"use client"
 
-import type React from "react";
-import { useState, useEffect, useRef } from "react";
-import Pagination from "./Pagination";
-import "../../styles/productos.css";
+import type React from "react"
+import { useState, useEffect, useRef } from "react"
+import Pagination from "./Pagination"
+import { useCartStore } from "../../lib/cart-store"
+import "../../styles/productos.css"
 
 interface Subcategory {
-  id: string;
-  name: string;
+  id: string
+  name: string
 }
 
 interface Category {
-  id: string;
-  name: string;
-  subcategories: Subcategory[];
-  icon?: string;
+  id: string
+  name: string
+  subcategories: Subcategory[]
+  icon?: string
 }
 
 interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  minimumPrice: string;
-  image: string;
-  category: string;
-  subcategory: string;
-  detailedDescription: string;
-  gallery: string[];
+  id: string
+  name: string
+  description: string
+  price: string
+  minimumPrice: string
+  image: string
+  category: string
+  subcategory: string
+  detailedDescription: string
+  gallery: string[]
 }
 
 interface ProductsGridProps {
-  initialProducts: Product[];
-  categories: Category[];
-  initialCategory?: string;
-  initialSubcategory?: string;
-  initialPage?: number;
+  initialProducts: Product[]
+  categories: Category[]
+  initialCategory?: string
+  initialSubcategory?: string
+  initialPage?: number
+}
+
+interface AddToCartButtonProps {
+  product: Product
+  purchaseType: "unit" | "bulk"
+  label: string
+}
+
+const AddToCartButton: React.FC<AddToCartButtonProps> = ({ product, purchaseType, label }) => {
+  const addItem = useCartStore((state) => state.addItem)
+  const [added, setAdded] = useState(false)
+
+  const handleClick = () => {
+    addItem(product, purchaseType)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2000)
+  }
+
+  return (
+    <button onClick={handleClick} className={`product-btn product-btn-cart ${added ? "added" : ""}`}>
+      {added ? "✓ Añadido" : label}
+    </button>
+  )
 }
 
 const ProductsGrid: React.FC<ProductsGridProps> = ({
@@ -46,135 +70,134 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
   initialPage = 1,
 }) => {
   // Estado
-  const [currentCategory, setCurrentCategory] =
-    useState<string>(initialCategory);
-  const [currentSubcategory, setCurrentSubcategory] =
-    useState<string>(initialSubcategory);
-  const [currentPage, setCurrentPage] = useState<number>(initialPage);
-  const [filteredProducts, setFilteredProducts] =
-    useState<Product[]>(initialProducts);
-  const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
-  const [totalPages, setTotalPages] = useState<number>(1);
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const [showFilters, setShowFilters] = useState<boolean>(false);
-  const [sortOrder, setSortOrder] = useState<string>("recomendado");
-  const [activeFilters, setActiveFilters] = useState<number>(0);
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [currentCategory, setCurrentCategory] = useState<string>(initialCategory)
+  const [currentSubcategory, setCurrentSubcategory] = useState<string>(initialSubcategory)
+  const [currentPage, setCurrentPage] = useState<number>(initialPage)
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(initialProducts)
+  const [displayedProducts, setDisplayedProducts] = useState<Product[]>([])
+  const [totalPages, setTotalPages] = useState<number>(1)
+  const [searchTerm, setSearchTerm] = useState<string>("")
+  const [showFilters, setShowFilters] = useState<boolean>(false)
+  const [sortOrder, setSortOrder] = useState<string>("recomendado")
+  const [activeFilters, setActiveFilters] = useState<number>(0)
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+  const [productTypeFilter, setProductTypeFilter] = useState<"all" | "unit" | "bulk">("all")
 
   // Refs para el carrusel de categorías
-  const categoriesRef = useRef<HTMLDivElement>(null);
-  const [showLeftArrow, setShowLeftArrow] = useState<boolean>(false);
-  const [showRightArrow, setShowRightArrow] = useState<boolean>(true);
+  const categoriesRef = useRef<HTMLDivElement>(null)
+  const [showLeftArrow, setShowLeftArrow] = useState<boolean>(false)
+  const [showRightArrow, setShowRightArrow] = useState<boolean>(true)
 
   // Productos por página (3x4 grid = 12 productos)
-  const productsPerPage = 12;
+  const productsPerPage = 12
 
   // Filtrar productos cuando cambian los filtros
   useEffect(() => {
-    let filtered = [...initialProducts];
+    let filtered = [...initialProducts]
 
     // Filtrar por búsqueda
     if (searchTerm.trim() !== "") {
-      const searchLower = searchTerm.toLowerCase();
+      const searchLower = searchTerm.toLowerCase()
       filtered = filtered.filter(
         (product) =>
-          product.name.toLowerCase().includes(searchLower) ||
-          product.description.toLowerCase().includes(searchLower)
-      );
+          product.name.toLowerCase().includes(searchLower) || product.description.toLowerCase().includes(searchLower),
+      )
     }
 
     // Filtrar por categoría
     if (currentCategory !== "todos") {
-      filtered = filtered.filter(
-        (product) => product.category === currentCategory
-      );
+      filtered = filtered.filter((product) => product.category === currentCategory)
 
       // Filtrar por subcategoría
       if (currentSubcategory !== "todos") {
-        filtered = filtered.filter(
-          (product) => product.subcategory === currentSubcategory
-        );
+        filtered = filtered.filter((product) => product.subcategory === currentSubcategory)
       }
+    }
+
+    // Filtrar por tipo de producto
+    if (productTypeFilter === "unit") {
+      filtered = filtered.filter((product) => product.minimumPrice)
+    } else if (productTypeFilter === "bulk") {
+      filtered = filtered.filter((product) => product.price)
     }
 
     // Ordenar productos
     if (sortOrder === "menor-precio") {
       filtered.sort((a, b) => {
-        const priceA = Number.parseFloat(a.price.replace(/[^\d.-]/g, ""));
-        const priceB = Number.parseFloat(b.price.replace(/[^\d.-]/g, ""));
-        return priceA - priceB;
-      });
+        const priceA = Number.parseFloat(a.price.replace(/[^\d.-]/g, ""))
+        const priceB = Number.parseFloat(b.price.replace(/[^\d.-]/g, ""))
+        return priceA - priceB
+      })
     } else if (sortOrder === "mayor-precio") {
       filtered.sort((a, b) => {
-        const priceA = Number.parseFloat(a.price.replace(/[^\d.-]/g, ""));
-        const priceB = Number.parseFloat(b.price.replace(/[^\d.-]/g, ""));
-        return priceB - priceA;
-      });
+        const priceA = Number.parseFloat(a.price.replace(/[^\d.-]/g, ""))
+        const priceB = Number.parseFloat(b.price.replace(/[^\d.-]/g, ""))
+        return priceB - priceA
+      })
     }
 
-    setFilteredProducts(filtered);
-    setTotalPages(Math.ceil(filtered.length / productsPerPage));
-    setCurrentPage(1); // Resetear a la primera página cuando cambian los filtros
+    setFilteredProducts(filtered)
+    setTotalPages(Math.ceil(filtered.length / productsPerPage))
+    setCurrentPage(1) // Resetear a la primera página cuando cambian los filtros
 
     // Contar filtros activos
-    let count = 0;
-    if (currentCategory !== "todos") count++;
-    if (currentSubcategory !== "todos") count++;
-    if (sortOrder !== "recomendado") count++;
-    setActiveFilters(count);
-  }, [
-    currentCategory,
-    currentSubcategory,
-    initialProducts,
-    searchTerm,
-    sortOrder,
-  ]);
+    let count = 0
+    if (currentCategory !== "todos") count++
+    if (currentSubcategory !== "todos") count++
+    if (sortOrder !== "recomendado") count++
+    if (productTypeFilter !== "all") count++
+    setActiveFilters(count)
+  }, [currentCategory, currentSubcategory, initialProducts, searchTerm, sortOrder, productTypeFilter])
 
   // Actualizar productos mostrados cuando cambia la página o los filtros
   useEffect(() => {
-    const startIndex = (currentPage - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    setDisplayedProducts(filteredProducts.slice(startIndex, endIndex));
-  }, [currentPage, filteredProducts]);
+    const startIndex = (currentPage - 1) * productsPerPage
+    const endIndex = startIndex + productsPerPage
+    setDisplayedProducts(filteredProducts.slice(startIndex, endIndex))
+  }, [currentPage, filteredProducts])
 
   // Actualizar URL cuando cambian los filtros o la página
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search)
 
     if (currentCategory !== "todos") {
-      params.set("categoria", currentCategory);
+      params.set("categoria", currentCategory)
 
       if (currentSubcategory !== "todos") {
-        params.set("subcategoria", currentSubcategory);
+        params.set("subcategoria", currentSubcategory)
       } else {
-        params.delete("subcategoria");
+        params.delete("subcategoria")
       }
     } else {
-      params.delete("categoria");
-      params.delete("subcategoria");
+      params.delete("categoria")
+      params.delete("subcategoria")
     }
 
     if (currentPage > 1) {
-      params.set("pagina", currentPage.toString());
+      params.set("pagina", currentPage.toString())
     } else {
-      params.delete("pagina");
+      params.delete("pagina")
     }
 
     if (searchTerm) {
-      params.set("buscar", searchTerm);
+      params.set("buscar", searchTerm)
     } else {
-      params.delete("buscar");
+      params.delete("buscar")
     }
 
     if (sortOrder !== "recomendado") {
-      params.set("ordenar", sortOrder);
+      params.set("ordenar", sortOrder)
     } else {
-      params.delete("ordenar");
+      params.delete("ordenar")
     }
 
-    const newUrl = params.toString()
-      ? `${window.location.pathname}?${params.toString()}`
-      : window.location.pathname;
+    if (productTypeFilter !== "all") {
+      params.set("tipo", productTypeFilter)
+    } else {
+      params.delete("tipo")
+    }
+
+    const newUrl = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname
 
     window.history.pushState(
       {
@@ -183,11 +206,12 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
         pagina: currentPage,
         buscar: searchTerm,
         ordenar: sortOrder,
+        tipo: productTypeFilter,
       },
       "",
-      newUrl
-    );
-  }, [currentCategory, currentSubcategory, currentPage, searchTerm, sortOrder]);
+      newUrl,
+    )
+  }, [currentCategory, currentSubcategory, currentPage, searchTerm, sortOrder, productTypeFilter])
 
   // Detectar si estamos en PC o móvil para establecer el modo de vista
   useEffect(() => {
@@ -195,131 +219,130 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
       if (window.innerWidth >= 992) {
         // En PC, verificar si estamos viendo un producto individual
         const isProductDetail =
-          window.location.pathname.includes("/productos/") &&
-          !window.location.pathname.endsWith("/productos/");
+          window.location.pathname.includes("/productos/") && !window.location.pathname.endsWith("/productos/")
 
         // Si estamos viendo un producto individual, usar vista de lista
         if (isProductDetail) {
-          setViewMode("list");
+          setViewMode("list")
         }
       } else {
         // En móvil, siempre usar vista de cuadrícula
-        setViewMode("grid");
+        setViewMode("grid")
       }
-    };
+    }
 
     // Ejecutar al cargar y cuando cambie el tamaño de la ventana
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    handleResize()
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   // Comprobar si se deben mostrar las flechas de navegación
   useEffect(() => {
     const checkArrows = () => {
-      const container = categoriesRef.current;
-      if (!container) return;
+      const container = categoriesRef.current
+      if (!container) return
 
-      setShowLeftArrow(container.scrollLeft > 10);
-      setShowRightArrow(
-        container.scrollLeft <
-          container.scrollWidth - container.clientWidth - 10
-      );
-    };
+      setShowLeftArrow(container.scrollLeft > 10)
+      setShowRightArrow(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
+    }
 
     // Comprobar inicialmente
-    checkArrows();
+    checkArrows()
 
     // Añadir listener para el evento scroll
-    const container = categoriesRef.current;
+    const container = categoriesRef.current
     if (container) {
-      container.addEventListener("scroll", checkArrows);
+      container.addEventListener("scroll", checkArrows)
 
       // Limpiar listener
       return () => {
-        container.removeEventListener("scroll", checkArrows);
-      };
+        container.removeEventListener("scroll", checkArrows)
+      }
     }
-  }, []);
+  }, [])
 
   // Comprobar flechas al cambiar el tamaño de la ventana
   useEffect(() => {
     const handleResize = () => {
-      const container = categoriesRef.current;
-      if (!container) return;
+      const container = categoriesRef.current
+      if (!container) return
 
-      setShowLeftArrow(container.scrollLeft > 10);
-      setShowRightArrow(
-        container.scrollLeft <
-          container.scrollWidth - container.clientWidth - 10
-      );
-    };
+      setShowLeftArrow(container.scrollLeft > 10)
+      setShowRightArrow(container.scrollLeft < container.scrollWidth - container.clientWidth - 10)
+    }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   // Manejadores de eventos
   const handleCategoryClick = (categoryId: string) => {
-    setCurrentCategory(categoryId);
-    setCurrentSubcategory("todos");
-  };
+    setCurrentCategory(categoryId)
+    setCurrentSubcategory("todos")
+  }
 
   const handleSubcategoryClick = (subcategoryId: string) => {
-    setCurrentSubcategory(subcategoryId);
-    setShowFilters(false);
-  };
+    setCurrentSubcategory(subcategoryId)
+    setShowFilters(false)
+  }
 
   const handlePageClick = (page: number) => {
-    setCurrentPage(page);
+    setCurrentPage(page)
     // Eliminamos el scroll a la sección de productos porque ahora
     // el componente Pagination se encarga de hacer scroll al inicio de la página
-  };
+  }
+
+  const handleProductTypeFilterClick = (type: "all" | "unit" | "bulk") => {
+    setProductTypeFilter(type)
+    setShowFilters(false)
+  }
 
   // Manejador para el carrusel
   const scrollCategories = (direction: "left" | "right") => {
-    if (!categoriesRef.current) return;
+    if (!categoriesRef.current) return
 
-    const container = categoriesRef.current;
-    const categoryWidth = 120; // Ancho aproximado de una categoría + margen
-    const scrollAmount = direction === "left" ? -categoryWidth : categoryWidth;
+    const container = categoriesRef.current
+    const categoryWidth = 120 // Ancho aproximado de una categoría + margen
+    const scrollAmount = direction === "left" ? -categoryWidth : categoryWidth
 
     container.scrollBy({
       left: scrollAmount,
       behavior: "smooth",
-    });
-  };
+    })
+  }
 
   // Manejador para la búsqueda
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // La búsqueda ya se aplica en el useEffect
-  };
+  }
 
   // Manejador para cambiar el modo de vista
   const toggleViewMode = () => {
-    setViewMode(viewMode === "grid" ? "list" : "grid");
-  };
+    setViewMode(viewMode === "grid" ? "list" : "grid")
+  }
 
   // Manejador para limpiar filtros
   const clearFilters = () => {
-    setCurrentCategory("todos");
-    setCurrentSubcategory("todos");
-    setSortOrder("recomendado");
-    setSearchTerm("");
-    setShowFilters(false);
-  };
+    setCurrentCategory("todos")
+    setCurrentSubcategory("todos")
+    setSortOrder("recomendado")
+    setSearchTerm("")
+    setProductTypeFilter("all")
+    setShowFilters(false)
+  }
 
   // Función para determinar si un nombre es largo
   const isLongName = (name: string) => {
-    return name.length > 12;
-  };
+    return name.length > 12
+  }
 
   // Renderizar carrusel de categorías
   const renderCategoryCarousel = () => {
@@ -349,9 +372,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
 
         <div className="category-carousel" ref={categoriesRef}>
           <div
-            className={`category-item ${
-              currentCategory === "todos" ? "active" : ""
-            }`}
+            className={`category-item ${currentCategory === "todos" ? "active" : ""}`}
             onClick={() => handleCategoryClick("todos")}
             data-category="todos"
           >
@@ -367,7 +388,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <rect x="3" y="3" width="18" height="14" rx="2" ry="2"></rect>
                 <line x1="3" y1="9" x2="21" y2="9"></line>
                 <line x1="9" y1="21" x2="9" y2="9"></line>
               </svg>
@@ -378,20 +399,13 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`category-item ${
-                currentCategory === category.id ? "active" : ""
-              }`}
+              className={`category-item ${currentCategory === category.id ? "active" : ""}`}
               onClick={() => handleCategoryClick(category.id)}
               data-category={category.id}
             >
               <div className="category-icon">
                 {category.icon ? (
-                  <img
-                    src={category.icon || "/img/placeholder.svg"}
-                    alt={category.name}
-                    width="30"
-                    height="30"
-                  />
+                  <img src={category.icon || "/img/placeholder.svg"} alt={category.name} width="30" height="30" />
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -404,25 +418,12 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <rect
-                      x="2"
-                      y="7"
-                      width="20"
-                      height="14"
-                      rx="2"
-                      ry="2"
-                    ></rect>
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                   </svg>
                 )}
               </div>
-              <span
-                className={`category-name ${
-                  isLongName(category.name) ? "long-name" : ""
-                }`}
-              >
-                {category.name}
-              </span>
+              <span className={`category-name ${isLongName(category.name) ? "long-name" : ""}`}>{category.name}</span>
             </div>
           ))}
         </div>
@@ -449,8 +450,8 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           </button>
         )}
       </div>
-    );
-  };
+    )
+  }
 
   // Renderizar barra de búsqueda y filtros
   const renderSearchAndFilters = () => {
@@ -482,10 +483,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           </button>
         </form>
 
-        <button
-          className="filter-button"
-          onClick={() => setShowFilters(!showFilters)}
-        >
+        <button className="filter-button" onClick={() => setShowFilters(!showFilters)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -507,18 +505,16 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
             <line x1="9" y1="8" x2="15" y2="8"></line>
             <line x1="17" y1="16" x2="23" y2="16"></line>
           </svg>
-          {activeFilters > 0 && (
-            <span className="filter-badge">{activeFilters}</span>
-          )}
+          {activeFilters > 0 && <span className="filter-badge">{activeFilters}</span>}
           <span>Filtros</span>
         </button>
       </div>
-    );
-  };
+    )
+  }
 
   // Renderizar modal de filtros
   const renderFilterModal = () => {
-    if (!showFilters) return null;
+    if (!showFilters) return null
 
     return (
       <div className="filter-modal-overlay">
@@ -529,10 +525,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
               <button className="clear-filters-button" onClick={clearFilters}>
                 Limpiar filtros
               </button>
-              <button
-                className="close-modal-button"
-                onClick={() => setShowFilters(false)}
-              >
+              <button className="close-modal-button" onClick={() => setShowFilters(false)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -593,8 +586,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           {currentCategory !== "todos" && (
             <div className="filter-section">
               <h4 className="filter-section-title">
-                {categories.find((cat) => cat.id === currentCategory)?.name ||
-                  "Subcategorías"}
+                {categories.find((cat) => cat.id === currentCategory)?.name || "Subcategorías"}
               </h4>
               <div className="filter-options subcategory-options">
                 <label className="filter-option">
@@ -626,10 +618,49 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
               </div>
             </div>
           )}
+
+          <div className="filter-section">
+            <h4 className="filter-section-title">Tipo de Producto</h4>
+            <div className="filter-options">
+              <label className="filter-option">
+                <input
+                  type="radio"
+                  name="productType"
+                  value="all"
+                  checked={productTypeFilter === "all"}
+                  onChange={() => handleProductTypeFilterClick("all")}
+                />
+                <span className="radio-custom"></span>
+                Todos
+              </label>
+              <label className="filter-option">
+                <input
+                  type="radio"
+                  name="productType"
+                  value="unit"
+                  checked={productTypeFilter === "unit"}
+                  onChange={() => handleProductTypeFilterClick("unit")}
+                />
+                <span className="radio-custom"></span>
+                Por Unidad (Pesos)
+              </label>
+              <label className="filter-option">
+                <input
+                  type="radio"
+                  name="productType"
+                  value="bulk"
+                  checked={productTypeFilter === "bulk"}
+                  onChange={() => handleProductTypeFilterClick("bulk")}
+                />
+                <span className="radio-custom"></span>
+                Por Bulto (Dólares)
+              </label>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   // Renderizar productos
   const renderProducts = () => {
@@ -641,19 +672,17 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
             Limpiar filtros
           </button>
         </div>
-      );
+      )
     }
 
     // Determinar si estamos en la página de detalle de un producto individual
     const isProductDetail =
       typeof window !== "undefined" &&
       window.location.pathname.includes("/productos/") &&
-      !window.location.pathname.endsWith("/productos/");
+      !window.location.pathname.endsWith("/productos/")
 
     // Aplicar la clase list-view si estamos en PC y viendo un producto individual
-    const gridClassName = `products-grid ${
-      isProductDetail && window.innerWidth >= 992 ? "list-view" : ""
-    }`;
+    const gridClassName = `products-grid ${isProductDetail && window.innerWidth >= 992 ? "list-view" : ""}`
 
     return (
       <div className={gridClassName}>
@@ -661,38 +690,54 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           <div className="product-card" key={product.id}>
             <div className="product-image">
               <a href={`/productos/${product.id}`}>
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  loading="lazy"
-                />
+                <img src={product.image || "/placeholder.svg"} alt={product.name} loading="lazy" />
               </a>
             </div>
             <div className="product-info">
               <h3 className="product-title">
-                <a href={`/productos/${product.id}`}>
-                  {product.name}
-                </a>
+                <a href={`/productos/${product.id}`}>{product.name}</a>
               </h3>
               <p className="product-description">{product.description}</p>
-              <p className="product-price">{product.price}</p>
-              <p className="product-minimumPrice">{product.minimumPrice}</p>
-              <a
-                href={`/productos/${product.id}`}
-                className="product-btn"
-              >
-                Ver detalles
-              </a>
+              {productTypeFilter === "all" && (
+                <>
+                  {product.price && <p className="product-price">{product.price}</p>}
+                  {product.minimumPrice && <p className="product-minimumPrice">{product.minimumPrice}</p>}
+                </>
+              )}
+              {productTypeFilter === "bulk" && product.price && <p className="product-price">{product.price}</p>}
+              {productTypeFilter === "unit" && product.minimumPrice && (
+                <p className="product-minimumPrice">{product.minimumPrice}</p>
+              )}
+
+              <div className="product-actions">
+                {productTypeFilter === "all" && (
+                  <>
+                    {product.minimumPrice && (
+                      <AddToCartButton product={product} purchaseType="unit" label="Añadir Unidad" />
+                    )}
+                    {product.price && <AddToCartButton product={product} purchaseType="bulk" label="Añadir Bulto" />}
+                  </>
+                )}
+                {productTypeFilter === "unit" && product.minimumPrice && (
+                  <AddToCartButton product={product} purchaseType="unit" label="Añadir al Carrito" />
+                )}
+                {productTypeFilter === "bulk" && product.price && (
+                  <AddToCartButton product={product} purchaseType="bulk" label="Añadir al Carrito" />
+                )}
+                <a href={`/productos/${product.id}`} className="product-btn product-btn-secondary">
+                  Ver detalles
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    );
-  };
+    )
+  }
 
   // Renderizar información de depuración
   const renderDebugInfo = () => {
-    if (typeof window === "undefined" || !import.meta.env.DEV) return null;
+    if (typeof window === "undefined" || !import.meta.env.DEV) return null
 
     return (
       <div className="debug-info">
@@ -701,11 +746,38 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
         <p>Página: {currentPage}</p>
         <p>Búsqueda: {searchTerm}</p>
         <p>Orden: {sortOrder}</p>
+        <p>Tipo de Producto: {productTypeFilter}</p>
         <p>Total productos filtrados: {filteredProducts.length}</p>
         <p>Productos en esta página: {displayedProducts.length}</p>
       </div>
-    );
-  };
+    )
+  }
+
+  // Renderizar filtro de tipo de producto
+  const renderProductTypeFilter = () => {
+    return (
+      <div className="product-type-filter">
+        <button
+          className={`filter-btn ${productTypeFilter === "all" ? "active" : ""}`}
+          onClick={() => handleProductTypeFilterClick("all")}
+        >
+          Todos
+        </button>
+        <button
+          className={`filter-btn ${productTypeFilter === "unit" ? "active" : ""}`}
+          onClick={() => handleProductTypeFilterClick("unit")}
+        >
+          Por Unidad (Pesos)
+        </button>
+        <button
+          className={`filter-btn ${productTypeFilter === "bulk" ? "active" : ""}`}
+          onClick={() => handleProductTypeFilterClick("bulk")}
+        >
+          Por Bulto (Dólares)
+        </button>
+      </div>
+    )
+  }
 
   // Modificar el renderizado del encabezado para centrarlo mejor
   return (
@@ -722,13 +794,13 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
             {
               categories
                 .find((cat) => cat.id === currentCategory)
-                ?.subcategories.find((sub) => sub.id === currentSubcategory)
-                ?.name
+                ?.subcategories.find((sub) => sub.id === currentSubcategory)?.name
             }
           </h3>
         )}
       </div>
 
+      {renderProductTypeFilter()}
       {renderCategoryCarousel()}
       {renderSearchAndFilters()}
       {renderFilterModal()}
@@ -736,15 +808,11 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
       <section className="products-section">
         <div className="products-container">
           {renderProducts()}
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageClick}
-          />
+          <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageClick} />
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default ProductsGrid;
+export default ProductsGrid

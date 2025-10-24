@@ -827,8 +827,8 @@ export const products = [
     name: "CARGADOR 2.1 BOLSA TIPO C AITECH",
     description: "",
     detailedDescription: "",
-    price: "$2400 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$2400 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-01.webp",
     gallery: ["/images/productos/liquidacion/liquidacion-01.webp"],
     category: "liquidacion",
@@ -841,8 +841,8 @@ export const products = [
       "¡AURICULARES INALAMBRICOS LH-P47 EN LIQUIDACIÓN!",
     detailedDescription:
       "Auriculares LH-P47 con cancelación activa de ruido. Con hasta 15 horas de batería. Resistentes al agua. Incluye micrófono integrado para llamadas manos libres.",
-    price: "$3400 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$3400 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/auriculares/p47/p47.webp",
     gallery: ["/images/productos/audio/auriculares/p47/p47.webp"],
     category: "liquidacion",
@@ -854,8 +854,8 @@ export const products = [
     description: "AURICULARES INALAMBRICOS PRO 80 EN LIQUIDACIÓN!",
     detailedDescription:
       "Colores disponibles: Negro elegante - Blanco clásico - Azul vibrante",
-    price: "$6900 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$6900 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/auriculares/pro80/pro80.webp",
     gallery: ["/images/productos/audio/auriculares/pro80/pro80.webp"],
     category: "liquidacion",
@@ -867,8 +867,8 @@ export const products = [
     description: "¡AURICULARES INALAMBRICOS LH-P9 EN LIQUIDACIÓN!",
     detailedDescription:
       "Auriculares P9 con cancelación activa de ruido te permiten sumergirte completamente en tu música. Con hasta 10 horas de batería, son buenos para viajes largos. Resistentes al agua. Incluye micrófono integrado",
-    price: "5900 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$5900 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/auriculares/p9/p9.webp",
     gallery: ["/images/productos/audio/auriculares/p9/p9.webp"],
     category: "liquidacion",
@@ -880,8 +880,8 @@ export const products = [
     description: "Receptor bluetooth volt EN LIQUIDACIÓN!",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad.",
-    price: "$1700 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$1700 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
     gallery: [
       "/images/productos/volt/cables/receptorbluetooth/receptor-volt.webp",
@@ -894,8 +894,8 @@ export const products = [
     name: "CABEZAL 20W TIPO C",
     description: "Cabezal Tipo C",
     detailedDescription: "Un accesorio esencial para cargar tu dispositivo.",
-    price: "$3200 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$3200 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-06.webp",
     gallery: ["/images/productos/liquidacion/liquidacion-06.webp"],
     category: "liquidacion",
@@ -906,8 +906,8 @@ export const products = [
     name: "DEPILADORA DE CRISTAL UNISEX",
     description: "DEPILADORA DE CRISTAL UNISEX",
     detailedDescription: "",
-    price: "$2500 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$2500 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-07.webp",
     gallery: ["/images/productos/liquidacion/liquidacion-07.webp"],
     category: "liquidacion",
@@ -919,8 +919,8 @@ export const products = [
     description: "Lampara G LED Parlante en liquidación",
     detailedDescription:
       "Iluminación y sonido en un solo dispositivo. Conectividad Bluetooth para una experiencia inalámbrica. Diseño moderno y elegante que se adapta a cualquier espacio.",
-    price: "$8300 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$8300 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/parlantes/lamparag/lamparag.webp",
     gallery: ["/images/productos/audio/parlantes/lamparag/lamparag.webp"],
     category: "liquidacion",
@@ -932,8 +932,8 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares EN LIQUIDACIÓN",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$890 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$890 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/volt/cables/tipoc/bolsa_5a.webp",
     gallery: [
       "/images/productos/volt/cables/tipoc/bolsa_5a.webp",
@@ -948,8 +948,8 @@ export const products = [
     description: "Carga rapida con conexión Tipo C para celulares EN LIQUIDACIÓN",
     detailedDescription:
       "Cable marca Volt con conexión tipo c ofrece carga rapida a todos sus dispositivos compatibles.",
-    price: "$600 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$600 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/volt/cables/tipoc/caja_5a.webp",
     gallery: ["/images/productos/volt/cables/tipoc/caja_5a.webp"],
     category: "liquidacion",
@@ -961,8 +961,8 @@ export const products = [
     description: "Conector de audio de 3,5 mm, manos libres, con microfono",
     detailedDescription:
       "Auriculares marca Volt, modelo ER-19 con microfono integrado. 5 horas de bateria",
-    price: "$700 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$700 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/volt/auriculares/er19/er19.webp",
     gallery: [
       "/images/productos/volt/auriculares/er19/er19.webp",
@@ -978,8 +978,8 @@ export const products = [
       "Con luz led, bluetooth 5.0, resistente al agua, 2h batería continua",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos F9. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "$4500 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$4500 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/auriculares/f9/f9.webp",
     gallery: [
       "/images/productos/audio/auriculares/f9/f9.webp",
@@ -995,8 +995,8 @@ export const products = [
     description: "!SOPORTE UNIVERSAL HOLDER UNDER PARA AUTO EN LIQUIDACIÓN!",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan comodidad y seguridad al usar su dispositivo móvil en el coche.",
-    price: "$1800 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$1800 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/accesorios/soporte/auto/under/under.webp",
     gallery: [
       "/images/productos/accesorios/soporte/auto/under/under.webp",
@@ -1013,8 +1013,8 @@ export const products = [
     description: "¡Mini teclado inalambrico EN LIQUIDACIÓN!",
     detailedDescription:
       "Este teclado inalambrico modelo i8 es el mejor complemento para hacer todo tipo de actividades. Es cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.",
-    price: "$1800 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$1800 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/accesorios/teclado/i8/i8.webp",
     gallery: [
       "/images/productos/accesorios/teclado/i8/i8_01.webp",
@@ -1028,8 +1028,8 @@ export const products = [
     description: "¡Camara Panorámica 360° en liquidación!",
     detailedDescription:
       "Mantén tu hogar siempre vigilado con esta innovadora cámara de seguridad con forma de foco. Fácil de instalar, simplemente enrosca en una base E27 y conéctala al WiFi. ¡Vigila todo desde tu celular en tiempo real!",
-    price: "$15800 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$15800 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-15.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-07.webp",
@@ -1043,8 +1043,8 @@ export const products = [
     description: "¡Convierte cualquier pantalla en un Smart TV de tu hogar con este pack x5 en liquidación!.",
     detailedDescription:
       "Disfrutá de una experiencia multimedia completa con TV STICK, el aliado ideal para tus momentos de entretenimiento.",
-    price: "$27900 ARS c/u ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$139500 ARS ($27900 ARS c/u) ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-16.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-16.webp",
@@ -1058,8 +1058,8 @@ export const products = [
     description: "¡CARGADOR PORTÁTIL MAGNETICO AHORA EN LIQUIDACÓN!.",
     detailedDescription:
       "Disfrutá de una experiencia multimedia completa con TV STICK, el aliado ideal para tus momentos de entretenimiento.",
-    price: "$10900 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$10900 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-17.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-17.webp",
@@ -1073,8 +1073,8 @@ export const products = [
     description: "¡LAMPARA MATAMOSQUITOS EN LIQUIDACÓN!.",
     detailedDescription:
       "Lampara electrica Mata Mosquitos recargable USB.",
-    price: "$10400 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$10400 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-18.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-18.webp",
@@ -1088,8 +1088,8 @@ export const products = [
     description: "¡PARLANTE KITS-1678 EN LIQUIDACÓN!.",
     detailedDescription:
       "Mini Parlante portátil con Altavoz y bluetooth.",
-    price: "$6900 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$6900 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-19.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-19.webp",
@@ -1103,8 +1103,8 @@ export const products = [
     description: " GAME STICK PRO EN LIQUIDACÓN!.",
     detailedDescription:
       "Control inalambrico 2.4G para videojuegos.",
-    price: "$36000 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$36000 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-20.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-20.webp",
@@ -1118,8 +1118,8 @@ export const products = [
     description: "PACK X5 TV BOX 8K EN LIQUIDACÓN!.",
     detailedDescription:
       "Smart TV Box 8k Ultra HD 6GB RAM / 128GB ROM.",
-    price: "$28900 ARS c/u ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$144500 ARS ($28900 ARS c/u) ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-21.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-21.webp",
@@ -1134,8 +1134,8 @@ export const products = [
       "Auriculares Inalambricos M10 EN LIQUIDACIÓN!",
     detailedDescription:
       "Escuchar tu música favorita con estos auriculares in-ear inalámbricos M10. Su diseño te brinda comodidad y un ajuste seguro, mientras que la tecnología Bluetooth 5.0 te permite conectarlos fácilmente a tus dispositivos sin enredos de cables. Con el micrófono incorporado, podrás realizar llamadas con claridad y utilizar el modo manos libres para mayor comodidad en tus actividades diarias. Además, estos auriculares son resistentes al agua, lo que te permite usarlos en cualquier situación, incluso en días lluviosos.",
-    price: "7100 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "7100 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/auriculares/m10/m10.webp",
     gallery: ["/images/productos/audio/auriculares/m10/m10.webp"],
     category: "liquidacion",
@@ -1147,8 +1147,8 @@ export const products = [
     description: "SOPORTE KIT DE MICROFONO CON LUZ EN LIQUIDACIÓN!",
     detailedDescription:
       "Un accesorio esencial para aquellos que buscan hacer directos o grabaciones.",
-    price: "$12600 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$12600 ARS ¡LIQUIDACIÓN!",
     image:
       "/images/productos/accesorios/soporte/kit/microfono-luz/microfono-luz.webp",
     gallery: [
@@ -1164,8 +1164,8 @@ export const products = [
     description: "PARLANTE PORTATIL 3 EN LIQUIDACIÓN!.",
     detailedDescription:
       "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Disfruta de la libertad de movimiento sin cables molestos.",
-    price: "$8000 ARS ¡LIQUIDACIÓN!",
-    minimumPrice: "MINIMO $100K",
+    price: "",
+    minimumPrice: "$8000 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/audio/parlantes/portatil3/portatil3.webp",
     gallery: [
       "/images/productos/audio/parlantes/portatil3/portatil3.webp",
