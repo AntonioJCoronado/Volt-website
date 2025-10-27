@@ -53,3 +53,15 @@ export function sendWhatsAppMessage(items: CartItem[], totalUSD: number, totalAR
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
   window.open(whatsappUrl, "_blank")
 }
+
+export function generateProductInquiryMessage(productName: string): string {
+  const message = `Hola! Me interesa el producto: *${productName}*\n\n¿Podrían darme más información?`
+  return message
+}
+
+export function sendProductInquiry(productName: string): void {
+  const message = generateProductInquiryMessage(productName)
+  const encodedMessage = encodeURIComponent(message)
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
+  window.open(whatsappUrl, "_blank")
+}

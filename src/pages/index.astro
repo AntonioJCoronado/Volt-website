@@ -1,5 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { products } from "../data/product-catalog.js";
+
+// Productos de ejemplo para el home
+const featuredProducts = products.slice(0, 6);
 ---
 
 <MainLayout
@@ -31,7 +35,8 @@ import MainLayout from "../layouts/MainLayout.astro";
           <div class="badge">
             <span class="icon">📦</span>
             <span class="text"
-              >Compras superiores a $100.000 en productos surtidos. DESPACHAMOS EL MISMO DÍA</span
+              >Compras superiores a $100.000 en productos surtidos. DESPACHAMOS
+              EL MISMO DÍA</span
             >
           </div>
           <div class="badge">
@@ -57,37 +62,90 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const logo = document.getElementById("animated-logo");
-
-      if (!logo) {
-        return;
-      }
-
-      let angle = 0;
-
-      function animateLogo() {
-        angle += 0.01;
-
-        const moveX = Math.sin(angle) * 10;
-        const moveY = Math.cos(angle) * 10;
-
-        // @ts-ignore
-        logo.style.transform = `translate(${moveX}px, ${moveY}px)`;
-
-        requestAnimationFrame(animateLogo);
-      }
-
-      animateLogo();
-
-      logo.addEventListener("mouseover", function () {
-        this.style.filter = "drop-shadow(0 0 10px rgba(33, 150, 243, 0.6))";
-      });
-
-      logo.addEventListener("mouseout", function () {
-        this.style.filter = "none";
-      });
-    });
-  </script>
+  <!-- Productos Destacados -->
+  <section class="productos-destacados">
+    <div class="container">
+      <h2 class="section-title">Productos Destacados</h2>
+      <div class="productos-grid">
+        {
+          featuredProducts.map((product) => (
+            <a href={`/productos/${product.id}`} class="producto-card">
+              <div class="producto-image">
+                <img
+                  src={product.image || "/placeholder.svg"}
+                  alt={product.name}
+                  loading="lazy"
+                />
+              </div>
+              <div class="producto-info">
+                <h3 class="producto-name">{product.name}</h3>
+                <p class="producto-description">{product.description}</p>
+                <div class="producto-pricing">
+                  <p class="producto-price">{product.price}</p>
+                  <p class="producto-minimum">{product.minimumPrice}</p>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div class="ver-todos-container">
+        <a href="/productos" class="btn btn-secondary"
+          >Ver Todos los Productos</a
+        >
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.getElementById("animated-logo");
+
+    if (!logo) {
+      return;
+    }
+
+    let angle = 0;
+
+    function animateLogo() {
+      angle += 0.01;
+
+      const moveX = Math.sin(angle) * 10;
+      const moveY = Math.cos(angle) * 10;
+
+      (logo as HTMLElement).style.transform =
+        `translate(${moveX}px, ${moveY}px)`;
+
+      requestAnimationFrame(animateLogo);
+    }
+
+    animateLogo();
+
+    logo.addEventListener("mouseover", function () {
+      (this as HTMLElement).style.filter =
+        "drop-shadow(0 0 10px rgba(33, 150, 243, 0.6))";
+    });
+
+    logo.addEventListener("mouseout", function () {
+      (this as HTMLElement).style.filter = "none";
+    });
+  });
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".producto-card, .feature-card").forEach((card) => {
+    observer.observe(card);
+  });
+</script>

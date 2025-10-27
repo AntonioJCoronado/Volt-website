@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import CartView from "../components/react/CartView";
+---
+
+<MainLayout title="Ver Pedido" description="Revisa y modifica tu pedido" currentPage="ver-pedido">
+  <div class="ver-pedido-container">
+    <CartView client:load />
+  </div>
+</MainLayout>
+
+<style>
+  .ver-pedido-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 200px);
+  }
+
+  @media (max-width: 768px) {
+    .ver-pedido-container {
+      padding: 1rem 0.5rem;
+    }
+  }
+</style>

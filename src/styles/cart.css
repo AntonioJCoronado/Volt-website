@@ -3,8 +3,9 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 60px;
-  height: 60px;
+  /* Aumentar tamaño del botón para mejor área de toque en móviles */
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: var(--color-primary, #0066cc);
   color: white;
@@ -17,11 +18,22 @@
   font-size: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
   z-index: 1000;
+  /* Agregar padding invisible para aumentar área de toque */
+  padding: 8px;
+  /* Mejorar accesibilidad táctil */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .cart-button:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Agregar estado activo para feedback visual en móviles */
+.cart-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cart-badge {
@@ -38,6 +50,8 @@
   justify-content: center;
   font-size: 0.75rem;
   font-weight: bold;
+  /* Evitar que el badge interfiera con los clicks */
+  pointer-events: none;
 }
 
 .cart-drawer-overlay {
@@ -414,7 +428,32 @@
   .cart-button {
     bottom: 1rem;
     right: 1rem;
-    width: 56px;
-    height: 56px;
+    /* Aumentar aún más el tamaño en móviles para mejor accesibilidad */
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
+    /* Aumentar padding para área de toque más grande */
+    padding: 12px;
+  }
+
+  /* Asegurar que el badge sea más visible en móviles */
+  .cart-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+    top: -3px;
+    right: -3px;
+  }
+}
+
+/* Agregar media query adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .cart-button {
+    /* Posicionar mejor en pantallas pequeñas */
+    bottom: 0.75rem;
+    right: 0.75rem;
+    /* Mantener tamaño grande para fácil acceso */
+    width: 68px;
+    height: 68px;
   }
 }

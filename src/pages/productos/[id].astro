@@ -1,20 +1,21 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProductGallery from "../../components/ProductGallery.astro";
+import ProductDetailActions from "../../components/react/ProductDetailActions";
 import { categories, products } from "../../data/product-catalog";
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  detailedDescription: string;
-  price: string;
-  minimumPrice: string;
-  image: string;
-  gallery: string[];
-  category: string;
-  subcategory: string;
-}
+const Product = {
+  id: "string",
+  name: "string",
+  description: "string",
+  detailedDescription: "string",
+  price: "string",
+  minimumPrice: "string",
+  image: "string",
+  gallery: ["string"],
+  category: "string",
+  subcategory: "string",
+};
 
 export function getStaticPaths() {
   return products.map((product) => ({
@@ -24,7 +25,7 @@ export function getStaticPaths() {
 }
 
 // Obtener el producto de las props
-const { product } = Astro.props as { product: Product };
+const { product } = Astro.props;
 
 // Obtener categoría y subcategoría con verificación de tipo
 const category = categories.find((cat) => cat.id === product.category) || null;
@@ -68,9 +69,8 @@ const relatedProducts = products
             {subcategory ? <p>Subcategoría: {subcategory.name}</p> : null}
           </div>
 
-          <a href="https://wa.me/541154962132">
-            <button class="contactar-btn">Contactar a WhatsApp</button>
-          </a>
+          <!-- Reemplazado botón simple por componente con controles completos -->
+          <ProductDetailActions client:load product={product} />
 
           <div class="product-share">
             <p>Compartir:</p>
@@ -128,7 +128,7 @@ const relatedProducts = products
                 </div>
                 <div class="related-product-info">
                   <h3 class="related-product-title">
-                    <a href={`/Volt-website/productos/${relatedProduct.id}`}>
+                    <a href={`/productos/${relatedProduct.id}`}>
                       {relatedProduct.name}
                     </a>
                   </h3>
@@ -150,12 +150,14 @@ const relatedProducts = products
       document
         .querySelectorAll('a[href^="/productos"]')
         .forEach(function (link) {
-          link.addEventListener("click", function (e: Event) {
+          link.addEventListener("click", function (e) {
             const target = e.currentTarget as HTMLAnchorElement;
-            const href = target.getAttribute("href");
-            if (href && href.includes("?")) {
-              e.preventDefault();
-              window.location.href = href;
+            if (target) {
+              const href = target.getAttribute("href");
+              if (href && href.includes("?")) {
+                e.preventDefault();
+                window.location.href = href;
+              }
             }
           });
         });
@@ -228,26 +230,6 @@ const relatedProducts = products
 
   .product-meta a:hover {
     text-decoration: underline;
-  }
-
-  .contactar-btn {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: var(--border-radius-lg);
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-lg);
-    width: 100%;
-    font-weight: 600;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-  }
-
-  .contactar-btn:hover {
-    background-color: var(--color-primary-dark);
   }
 
   .product-share {

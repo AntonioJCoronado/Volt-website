@@ -20,7 +20,6 @@ export default function CartDrawer() {
 
   const hasUnitItems = items.some((item) => item.purchaseType === "unit")
   const hasBulkItems = items.some((item) => item.purchaseType === "bulk")
-  // Solo mostrar advertencia si hay productos por unidad Y no hay bultos Y no se alcanza el mínimo
   const minimumNotMet = hasUnitItems && !hasBulkItems && totalARS < 100000
 
   if (!isOpen) return null
@@ -119,8 +118,16 @@ export default function CartDrawer() {
             )}
 
             <button onClick={handleCheckout} disabled={!canCheckout()} className="cart-checkout-btn">
-              <span>📱</span>
-              Enviar pedido por WhatsApp
+              <img
+                src="/images/logos/logo-whatsapp.svg"
+                alt="WhatsApp"
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  filter: "brightness(0) invert(1)",
+                }}
+              />
+              Cerrar Pedido
             </button>
 
             <button

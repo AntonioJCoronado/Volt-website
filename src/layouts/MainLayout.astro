@@ -1,8 +1,11 @@
 ---
 import "../styles/main.css";
+import "../styles/cart.css";
+import "../styles/cart-view.css";
 
 const { title, description, currentPage } = Astro.props;
 ---
+
 
 <!doctype html>
 <html lang="es">
@@ -88,6 +91,9 @@ const { title, description, currentPage } = Astro.props;
         <a href="/productos" class={currentPage === "productos" ? "active" : ""}
           >Productos</a
         >
+        <a href="/ver-pedido" class={currentPage === "ver-pedido" ? "active" : ""}
+          >Ver Pedido</a
+        >
         <a href="/contacto" class={currentPage === "contacto" ? "active" : ""}
           >Contacto</a
         >
@@ -98,7 +104,11 @@ const { title, description, currentPage } = Astro.props;
       <slot />
     </main>
 
-    <!-- Botón flotante de WhatsApp -->
+    <div id="cart-components">
+      <div id="cart-button-root"></div>
+      <div id="cart-drawer-root"></div>
+    </div>
+
     <div
       id="whatsapp-button"
       style="
@@ -150,6 +160,7 @@ const { title, description, currentPage } = Astro.props;
             >Preguntas Frecuentes</a
           >
           <a href="/productos" class="nav-link">Productos</a>
+          <a href="/ver-pedido" class="nav-link">Ver Pedido</a>
           <a href="/contacto" class="nav-link">Contacto</a>
         </nav>
       </div>
@@ -227,6 +238,25 @@ const { title, description, currentPage } = Astro.props;
         }, 8000);
       } else {
         console.log("WhatsApp button NOT found!"); // Para debug
+      }
+    </script>
+
+    <script>
+      import { createRoot } from 'react-dom/client';
+      import { createElement } from 'react';
+      import CartButton from '../components/react/CartButton';
+      import CartDrawer from '../components/react/CartDrawer';
+
+      // Inicializar CartButton
+      const buttonRoot = document.getElementById('cart-button-root');
+      if (buttonRoot) {
+        createRoot(buttonRoot).render(createElement(CartButton));
+      }
+
+      // Inicializar CartDrawer
+      const drawerRoot = document.getElementById('cart-drawer-root');
+      if (drawerRoot) {
+        createRoot(drawerRoot).render(createElement(CartDrawer));
       }
     </script>
 
