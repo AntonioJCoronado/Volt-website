@@ -169,7 +169,7 @@ export const products = [
   {
     id: "liquidacion-1007",
     name: "CARGADOR 2.1 BOLSA TIPO C AITECH",
-    description: "Cargador AITECH Fast Charge 2.1A con Cable Tipo CK",
+    description: "Cargador AITECH Fast Charge 2.1A con Cable Tipo C",
     detailedDescription:
       "Potente y compacto, ideal para una carga rápida y segura de tus dispositivos. Este cargador AITECH cuenta con tecnología de carga rápida 2.1A, perfecto para celulares, tablets y otros dispositivos compatibles con conector Tipo C.",
     price: "",
