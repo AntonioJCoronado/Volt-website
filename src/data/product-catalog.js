@@ -77,6 +77,112 @@ export const categories = [
 /** @type {Product[]} */
 export const products = [
   {
+    id: "liquidacion-1001",
+    name: "CONSOLA RETRO",
+    description: "Consola Retro con Controles Inalámbricos 2.4G. Revive la nostalgia de los videojuegos clásicos con esta mini consola plug & play que convierte cualquier TV en un centro de entretenimiento retro.",
+    detailedDescription:
+      "Empareja fácilmente tu dispositivo mediante Bluetooth para una experiencia inalámbrica. Incluye control inalámbrico 2.4G (estilo PS2).",
+    price: "",
+    minimumPrice: "$27900 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1001.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1001.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1002",
+    name: "Cargador Tipo C 30W",
+    description: "Optimiza la carga de tus dispositivos con este cargador tipo C de 30 watts",
+    detailedDescription:
+      "Diseñado para ofrecer una potencia óptima y segura. Ideal para smartphones, tablets y otros dispositivos compatibles con USB Tipo C, garantiza una carga rápida que te permite estar siempre conectado sin largas esperas.",
+    price: "",
+    minimumPrice: "$5100 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1002.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1002.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1003",
+    name: "CARGADOR 2.6A V8 IBEK",
+    description: "Cargador de Viaje IBEK IB-2603",
+    detailedDescription:
+      "El cargador IBEK modelo IB-2603 es la solución ideal para mantener tus dispositivos cargados de forma rápida y segura. Diseñado para un rendimiento eficiente, este cargador incluye un cable Micro USB de 1 metro de longitud, lo que te brinda comodidad y libertad de movimiento mientras cargas tu dispositivo.",
+    price: "",
+    minimumPrice: "$2000 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1003.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1003.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1004",
+    name: "AURICULAR MANOS LIBRES X83",
+    description: "AURICULAR MANOS LIBRES X83",
+    detailedDescription:
+      "Disfrutá de una experiencia auditiva clara y cómoda con el Auricular Manos Libres X83. Ideal para quienes buscan practicidad y buen sonido en un solo accesorio.",
+    price: "",
+    minimumPrice: "$1100 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1004.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1004.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1005",
+    name: "Cables Auxiliares de Audio ORYX",
+    description: " Cables Auxiliares de Audio 3.5 mm Alta Fidelidad y Estilo",
+    detailedDescription:
+      "Conecta tu música donde quieras con estos prácticos y coloridos cables de audio auxiliar de 3.5 mm. Compatibles con celulares, bocinas, laptops, autos y más. ¡Llévalos siempre contigo y dale estilo a tu conexión! 🔥",
+    price: "",
+    minimumPrice: "$800 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1005.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1005.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1006",
+    name: "CARGADOR 3.8 V8 IBEK",
+    description: "CARGADOR 3.8 V8 IBEK",
+    detailedDescription:
+      "Este cargador ofrece una potencia constante y segura de 3.8V, ideal para una variedad de aparatos electrónicos. Su diseño compacto facilita su transporte y uso en cualquier lugar, desde el hogar hasta la oficina.",
+    price: "",
+    minimumPrice: "$2300 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1006.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1006.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  {
+    id: "liquidacion-1007",
+    name: "CARGADOR 2.1 BOLSA TIPO C AITECH",
+    description: "Cargador AITECH Fast Charge 2.1A con Cable Tipo CK",
+    detailedDescription:
+      "Potente y compacto, ideal para una carga rápida y segura de tus dispositivos. Este cargador AITECH cuenta con tecnología de carga rápida 2.1A, perfecto para celulares, tablets y otros dispositivos compatibles con conector Tipo C.",
+    price: "",
+    minimumPrice: "$1900 ARS ¡LIQUIDACIÓN!",
+    image: "/images/productos/liquidacion/liquidacion-1007.webp",
+    gallery: [
+      "/images/productos/liquidacion/liquidacion-1007.webp",
+    ],
+    category: "liquidacion",
+    subcategory: "",
+  },
+  // EXCLUSIVO liquidacion WHATSAPP lo de arriba
+  {
     id: "1002",
     name: "Auriculares Inalambricos P47",
     description:
@@ -1089,7 +1195,7 @@ export const products = [
     detailedDescription:
       "Mini Parlante portátil con Altavoz y bluetooth.",
     price: "",
-    minimumPrice: "$6900 ARS ¡LIQUIDACIÓN!",
+    minimumPrice: "$6100 ARS ¡LIQUIDACIÓN!",
     image: "/images/productos/liquidacion/liquidacion-19.webp",
     gallery: [
       "/images/productos/liquidacion/liquidacion-19.webp",
